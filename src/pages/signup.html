@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+  <title>Vefold</title>
+
+<!--  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">-->
+<!--  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">-->
+<!--  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">-->
+<!--  <link rel="manifest" href="images/favicon/site.webmanifest">-->
+
+  <meta name="msapplication-TileColor" content="#333333">
+  <meta name="theme-color" content="#0093F5">
+  <meta name="msapplication-navbutton-color" content="#0093F5">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#0093F5">
+
+  <link rel="preload" href="fonts/GothamLight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/GothamLight.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/GothamLight.otf" as="font" type="font/otf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/GothamBook.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/GothamBook.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/GothamBook.otf" as="font" type="font/otf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/GothamBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/GothamBold.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/GothamBold.otf" as="font" type="font/otf" crossorigin="anonymous">
+  <link rel="preload" href="fonts/GothamMedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/GothamMedium.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/GothamMedium.otf" as="font" type="font/otf" crossorigin="anonymous">
+
+  <link rel="prefetch" href="css/styles.min.css" as="style">
+  <link rel="prefetch" href="js/scripts.min.js" as="script">
+
+  <link rel="stylesheet" href="css/styles.min.css">
+
+</head>
+
+<body>
+
+<main id="wrapper">
+<header class="header">
+
+</header>
+<section class="section sign sign-in">
+  <div class="section-bg">
+    <picture>
+      <source srcset="images/bg.webp" type="image/webp">
+      <source srcset="images/bg.png" type="image/png">
+      <img src="images/bg.png" alt="Sign In">
+    </picture>
+  </div>
+  <div class="container">
+    <div class="sign-box">
+      <div class="sign-box-title">
+        <h3 class="title-3">Stofna aðgang</h3>
+      </div>
+      <div class="sign-box-form">
+        <form>
+          <div class="input-container">
+            <input type="text" class="input" placeholder="Fullt Nafn">
+            <span class="input-container-message">Rangt netfang eða lykilorð</span>
+            <div class="input-container-btn">
+              <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+            </div>
+          </div>
+          <div class="input-container">
+            <input type="text" class="input" placeholder="Netfang">
+            <span class="input-container-message">Rangt netfang eða lykilorð</span>
+            <div class="input-container-btn">
+              <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+            </div>
+          </div>
+          <div class="input-container">
+            <span class="input-container-message __done">Mjög gott</span>
+            <input type="password" class="input" placeholder="Lykilorð">
+            <span class="input-container-message">Rangt netfang eða lykilorð</span>
+            <div class="input-container-btn">
+              <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+            </div>
+          </div>
+          <div class="input-container">
+            <input type="password" class="input" placeholder="Lykilorð aftur">
+            <span class="input-container-message">Rangt netfang eða lykilorð</span>
+            <div class="input-container-btn">
+              <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+            </div>
+          </div>
+          <div class="input-container">
+            <label class="input-container-check">
+              <input type="checkbox" value="agree" class="input-check" id="check">
+              <span class="input-check-icon">
+                <svg class="icon"><use xlink:href="images/sprite.svg#selected"></use></svg>
+              </span>
+              <span class="input-check-title">Ég samþykki og hef lesið <a href="#">skilmála</a> Vefaldar</span>
+              <span class="input-check-message">Þú þarft að samþykkja skilmála</span>
+            </label>
+          </div>
+          <button class="btn btn-sm full-width" id="check-rule">
+            <span class="btn-title">Stofna aðgang</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+
+</footer>
+</main>
+
+<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

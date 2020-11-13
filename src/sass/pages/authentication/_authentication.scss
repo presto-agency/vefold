@@ -1,0 +1,89 @@
+.sign{
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+    &-in{
+
+    }
+    &-up{
+
+    }
+    &-box{
+      min-height: 100vh;
+      padding: 208px 0;
+      max-width: 420px;
+      margin: 0 auto;
+        &-title{
+          margin-bottom: 18px;
+            @include d(480){
+              margin-bottom: 8px;
+            }
+        }
+        &-form{
+          padding: 30px 0;
+            .btn{
+              @include m(481){
+                margin-top: 16px;
+              }
+            }
+            .input-container-check{
+              margin-top: 11px;
+                @include d(480){
+                  margin-top: 9px;
+                }
+            }
+            @include d(480){
+              padding: 30px 0 20px;
+            }
+        }
+        &-detail{
+          text-align: center;
+          padding: 2px 0 7px;
+        }
+        @include dh(750){
+          padding: 18vh 0;
+        }
+    }
+    &-notification{
+      max-width: 710px;
+        &-icon{
+          width: 80px;
+          height: 80px;
+          margin: 34px auto 26px;
+          background-color: var(--color-white);
+          border-radius: 50%;
+          border: 3px var(--color-warning-100) solid;
+          position: relative;
+            .icon{
+              fill: var(--color-primary);
+              width: 38px;
+              height: 38px;
+              top: 50%;
+              left: 50%;
+              margin-top: -19px;
+              margin-left: -21px;
+              position: absolute;
+                @include d(480){
+                  width: 34px;
+                  height: 34px;
+                  margin-top: -17px;
+                  margin-left: -19px;
+                }
+            }
+            @include d(480){
+              width: 72px;
+              height: 72px;
+              margin: 10px auto 25px;
+            }
+        }
+        &-description{
+          margin-bottom: 41px;
+            @include d(480){
+              padding: 0 25px;
+                .title-5{
+                  line-height: 2em;
+                }
+            }
+        }
+    }
+}

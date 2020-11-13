@@ -1,0 +1,43 @@
+.title-1{
+  @extend h1;
+}
+
+.title-2{
+  @extend h2;
+}
+
+.title-3{
+  @extend h3;
+}
+
+.title-4{
+  @extend h4;
+}
+
+.title-5{
+  @extend h5;
+}
+
+.light{
+  font-family: var(--font-light);
+  font-weight: 300;
+}
+
+.book{
+  font-family: var(--font-regular);
+  font-weight: 400;
+}
+
+.medium{
+  font-family: var(--font-medium);
+  font-weight: 500;
+}
+
+.bold{
+  font-family: var(--font-bold);
+  font-weight: 700;
+}
+
+.full-width{
+  width: 100%;
+}

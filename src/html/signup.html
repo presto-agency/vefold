@@ -1,0 +1,66 @@
+//= components/_head.html
+//= components/_header.html
+<section class="section sign sign-in">
+  <div class="section-bg">
+    <picture>
+      <source srcset="images/bg.webp" type="image/webp">
+      <source srcset="images/bg.png" type="image/png">
+      <img src="images/bg.png" alt="Sign In">
+    </picture>
+  </div>
+  <div class="container">
+    <div class="sign-box">
+      <div class="sign-box-title">
+        <h3 class="title-3">Stofna aðgang</h3>
+      </div>
+      <div class="sign-box-form">
+        <form>
+          <div class="input-container">
+            <input type="text" class="input" placeholder="Fullt Nafn" />
+            <span class="input-container-message">Rangt netfang eða lykilorð</span>
+            <div class="input-container-btn">
+              <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+            </div>
+          </div>
+          <div class="input-container">
+            <input type="text" class="input" placeholder="Netfang" />
+            <span class="input-container-message">Rangt netfang eða lykilorð</span>
+            <div class="input-container-btn">
+              <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+            </div>
+          </div>
+          <div class="input-container">
+            <span class="input-container-message __done">Mjög gott</span>
+            <input type="password" class="input" placeholder="Lykilorð" />
+            <span class="input-container-message">Rangt netfang eða lykilorð</span>
+            <div class="input-container-btn">
+              <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+            </div>
+          </div>
+          <div class="input-container">
+            <input type="password" class="input" placeholder="Lykilorð aftur" />
+            <span class="input-container-message">Rangt netfang eða lykilorð</span>
+            <div class="input-container-btn">
+              <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+            </div>
+          </div>
+          <div class="input-container">
+            <label class="input-container-check">
+              <input type="checkbox" value="agree" class="input-check" id="check" />
+              <span class="input-check-icon">
+                <svg class="icon"><use xlink:href="images/sprite.svg#selected"></use></svg>
+              </span>
+              <span class="input-check-title">Ég samþykki og hef lesið <a href="#">skilmála</a> Vefaldar</span>
+              <span class="input-check-message">Þú þarft að samþykkja skilmála</span>
+            </label>
+          </div>
+          <button class="btn btn-sm full-width" id="check-rule">
+            <span class="btn-title">Stofna aðgang</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+//= components/_footer.html
+//= components/_scripts.html

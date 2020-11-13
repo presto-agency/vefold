@@ -1,0 +1,155 @@
+body{
+  background-color: var(--color-background);
+  @extend .book;
+  font-size: 14px;
+}
+
+h2{
+  font-size: 48px;
+  @extend .book;
+  line-height: 1.333em;
+}
+
+h3{
+  font-size: 40px;
+  line-height: 1.4em;
+  @extend .light;
+    @include d(575){
+      font-size: 36px;
+    }
+    @include d(480){
+      font-size: 32px;
+    }
+}
+
+h5{
+  font-size: 24px;
+  @extend .light;
+  line-height: 1.333em;
+  letter-spacing: .02em;
+    @include d(767){
+      font-size: 20px;
+    }
+    @include d(575){
+      font-size: 18px;
+    }
+    @include d(480){
+      font-size: 16px;
+    }
+}
+
+#wrapper{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container{
+  max-width: 1214px;
+  margin: 0 auto;
+  padding: 0 16px;
+  position: relative;
+}
+
+.section{
+  position: relative;
+    &-bg{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+        img{
+          object-fit: cover;
+          object-position: center top;
+          width: 100%;
+          height: 100%;
+          height: auto;
+          min-height: 100%;
+          max-height: none;
+        }
+    }
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 2px;
+  border: 1px var(--color-warning-200) solid;
+  background-color: var(--color-warning-100);
+  color: var(--color-white);
+  padding: 0 45px;
+  @extend .bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: .06em;
+  transition: background-color .2s ease-out;
+    &-sm{
+      border: none;
+    }
+    &-icon{
+      width: 17px;
+      height: 17px;
+      display: inline-block;
+      position: relative;
+        .icon{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        & ~ .btn-title{
+          margin-left: 7px;
+        }
+    }
+    @include d(480){
+      height: 40px;
+      line-height: 40px;
+      font-size: 10px;
+    }
+    @include hover(991){
+      &:hover{
+        background-color: var(--color-warning-200);
+      }
+    }
+}
+
+.link{
+  display: inline-block;
+  line-height: 1.714em;
+  font-size: 14px;
+  @extend .book;
+  transition: color .2s ease-out;
+    &-ttu{
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      @extend .medium;
+      display: inline-flex;
+      align-items: center;
+        .icon{
+          width: 13px;
+          height: 13px;
+          margin-right: 8px;
+          fill: currentColor;
+        }
+        @include d(480){
+          font-size: 12px;
+        }
+    }
+    @include hover(991){
+      &:hover{
+        color: var(--color-gray-200);
+      }
+    }
+}
+
+.icon{
+  width: 24px;
+  height: 24px;
+  fill: var(--color-white);
+}
