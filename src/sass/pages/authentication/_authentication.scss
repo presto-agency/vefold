@@ -63,6 +63,15 @@
               margin-top: -19px;
               margin-left: -21px;
               position: absolute;
+                svg{
+                  fill: var(--color-primary);
+                }
+                &[iecp-needed="true"]{
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  background-position: center;
+                  background-image: url(../../images/icons/message.svg);
+                }
                 @include d(480){
                   width: 34px;
                   height: 34px;
@@ -83,6 +92,18 @@
                 .title-5{
                   line-height: 2em;
                 }
+            }
+        }
+        &-action{
+            .link-ttu{
+              .icon{
+                &[iecp-needed="true"]{
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  background-position: center;
+                  background-image: url(../../images/icons/back.svg);
+                }
+              }
             }
         }
     }
