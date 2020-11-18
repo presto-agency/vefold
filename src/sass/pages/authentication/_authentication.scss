@@ -16,7 +16,7 @@
         &-title{
           margin-bottom: 18px;
             @include d(480){
-              margin-bottom: 8px;
+              margin-bottom: 6px;
             }
         }
         &-form{
@@ -33,7 +33,7 @@
                 }
             }
             @include d(480){
-              padding: 30px 0 20px;
+              padding: 30px 0 23px;
             }
         }
         &-detail{

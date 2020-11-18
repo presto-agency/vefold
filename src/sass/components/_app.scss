@@ -14,6 +14,7 @@ h3{
   font-size: 40px;
   line-height: 1.4em;
   @extend .light;
+  letter-spacing: -.02em;
     @include d(575){
       font-size: 36px;
     }
@@ -26,7 +27,7 @@ h5{
   font-size: 24px;
   @extend .light;
   line-height: 1.333em;
-  letter-spacing: .02em;
+  letter-spacing: -.01em;
     @include d(767){
       font-size: 20px;
     }
@@ -35,6 +36,7 @@ h5{
     }
     @include d(480){
       font-size: 16px;
+      letter-spacing: 0;
     }
 }
 
@@ -127,7 +129,7 @@ h5{
   transition: color .2s ease-out;
     &-ttu{
       text-transform: uppercase;
-      letter-spacing: .06em;
+      letter-spacing: .04em;
       @extend .medium;
       display: inline-flex;
       align-items: center;
