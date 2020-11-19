@@ -9,7 +9,8 @@
 
 @font-face {
   font-family: "GothamSSm Book";
-  src: url('../fonts/GothamSSm-Book.otf') format('truetype'),
+  src: url('../fonts/GothamSSm-Book.ttf') format("truetype"),
+  url('../fonts/GothamSSm-Book.otf') format('truetype'),
   url("../fonts/GothamSSm-Book.woff") format("woff"),
   url("../fonts/GothamSSm-Book.woff2") format("woff2");
   font-weight: normal;
