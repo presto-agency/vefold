@@ -2,12 +2,15 @@ body{
   background-color: var(--color-background);
   @extend .book;
   font-size: 14px;
+  color: var(--color-gray-400);
 }
 
 h2{
   font-size: 48px;
-  @extend .book;
+  @extend .light;
   line-height: 1.333em;
+  letter-spacing: -.03em;
+  color: var(--color-gray-600);
 }
 
 h3{
@@ -15,6 +18,7 @@ h3{
   line-height: 1.4em;
   @extend .light;
   letter-spacing: -.02em;
+  color: var(--color-gray-600);
     @include d(575){
       font-size: 36px;
     }
@@ -28,6 +32,7 @@ h5{
   @extend .light;
   line-height: 1.333em;
   letter-spacing: -.01em;
+  color: var(--color-gray-600);
     @include d(767){
       font-size: 20px;
     }
@@ -122,22 +127,37 @@ h5{
 }
 
 .link{
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   line-height: 1.714em;
   font-size: 14px;
-  @extend .book;
+  @extend .light;
   transition: color .2s ease-out;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+  white-space: nowrap;
+    .icon{
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+      margin-right: 6px;
+        &.__stroke{
+          stroke: currentColor;
+        }
+    }
     &-ttu{
       text-transform: uppercase;
-      letter-spacing: .04em;
+      letter-spacing: .06em;
       @extend .medium;
+      font-size: 12px;
       display: inline-flex;
       align-items: center;
         .icon{
           width: 13px;
           height: 13px;
           margin-right: 8px;
-          fill: currentColor;
         }
         @include d(480){
           font-size: 12px;
@@ -148,10 +168,77 @@ h5{
         color: var(--color-gray-200);
       }
     }
+    &-icon{
+      width: 72px;
+      height: 60px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+        .icon{
+          width: 24px;
+          height: 24px;
+          display: inline-block;
+          position: relative;
+        }
+        @include hover(991){
+          &:hover{
+            color: inherit;
+          }
+        }
+    }
 }
 
 .icon{
   width: 24px;
   height: 24px;
   fill: var(--color-white);
+    &.__stroke{
+      stroke: var(--color-white);
+    }
+}
+
+.notification-count{
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.18);
+  background-color: var(--color-warning-100);
+  font-size: 8px;
+  text-shadow: 0 0.5px 0 rgba(0, 0, 0, 0.18);
+  text-align: center;
+  line-height: 13px;
+  @extend .bold;
+}
+
+.hr{
+  border: none;
+  background-color: var(--color-gray-200);
+  height: 1px;
+  margin: 18px 0;
+}
+
+.copy{
+  position: relative;
+  font-size: 10px;
+    &:not(:last-child){
+      padding-right: 17px;
+        &:before{
+          content: '';
+          position: absolute;
+          width: 2px;
+          height: 2px;
+          background-color: currentColor;
+          right: 5px;
+          top: 5px;
+        }
+    }
+}
+
+.title-16{
+  font-size: 16px;
+  @extend .bold;
+  color: var(--color-gray-600);
 }

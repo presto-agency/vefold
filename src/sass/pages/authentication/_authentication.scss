@@ -96,6 +96,8 @@
         }
         &-action{
             .link-ttu{
+              font-size: 14px;
+              letter-spacing: .04em;
               .icon{
                 &[iecp-needed="true"]{
                   background-repeat: no-repeat;
@@ -105,6 +107,14 @@
                 }
               }
             }
+        }
+    }
+    .title{
+        &-2,
+        &-3,
+        &-4,
+        &-5{
+          color: inherit;
         }
     }
 }

@@ -1,0 +1,26 @@
+.welcome{
+  padding: 80px 0 98px;
+    &-title{
+      text-align: center;
+      margin: 21px 0 6px;
+        .title-2{
+          display: inline-block;
+          position: relative;
+            &:before{
+              content: '';
+              position: absolute;
+              right: -113px;
+              top: -62px;
+              width: 90px;
+              height: 100px;
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center;
+              background-image: url(../images/arrow.svg);
+            }
+        }
+    }
+    &-subtitle{
+      text-align: center;
+    }
+}

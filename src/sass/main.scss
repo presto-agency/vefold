@@ -15,9 +15,13 @@ Libs
 Pages
  */
 @import "pages/authentication/authentication";
+@import "pages/welcome/welcome";
+@import "pages/welcome/about";
 
 /*
 Components
  */
 @import "components/app";
 @import "components/input";
+@import "components/header";
+@import "components/footer";
