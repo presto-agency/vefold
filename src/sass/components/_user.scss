@@ -1,0 +1,43 @@
+.user{
+    &-carousel{
+      margin: 0 -26px 0 -21px;
+        &-slide{
+          padding: 0 26px 0 21px;
+        }
+    }
+    &-link{
+      padding: 11px 0;
+      border-bottom: 1px var(--color-gray-200) solid;
+        .link{
+          font-size: 12px;
+        }
+    }
+    &-data{
+        &-header{
+          position: relative;
+          padding-bottom: 15px;
+            &:before{
+              content: '';
+              position: absolute;
+              bottom: 0;
+              height: 1px;
+              left: -21px;
+              right: -26px;
+              background-color: var(--color-gray-200);
+            }
+        }
+        &-form{
+          padding: 18px 0;
+            .input-container{
+                &-message{
+                  display: none;
+                }
+                &.error{
+                  .input{
+                    padding-right: 8px;
+                  }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.notification{
+    &-count{
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      border-radius: 50%;
+      width: 13px;
+      height: 13px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.18);
+      background-color: var(--color-warning-100);
+      font-size: 8px;
+      text-shadow: 0 0.5px 0 rgba(0, 0, 0, 0.18);
+      text-align: center;
+      line-height: 13px;
+      @extend .bold;
+    }
+    &-list{
+      padding: 12px 0;
+        &-item{
+          padding: 20px 0 15px;
+          border-top: 1px var(--color-gray-200) solid;
+        }
+    }
+}

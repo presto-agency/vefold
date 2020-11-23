@@ -58,20 +58,30 @@
           pointer-events: none;
           transition: opacity .2s ease-out;
             .icon{
-              width: 8px;
-              height: 8px;
-              fill: var(--color-danger);
+              width: 14px;
+              height: 14px;
+              stroke: var(--color-danger);
               position: absolute;
               top: 50%;
               left: 50%;
-              margin-top: -4px;
-              margin-left: -4px;
+              margin-top: -7px;
+              margin-left: -8px;
             }
         }
         &-check{
           display: inline-flex;
           align-items: center;
           justify-content: center;
+        }
+        &-label{
+          display: inline-block;
+          letter-spacing: .01em;
+          font-size: 10px;
+          @extend .medium;
+          color: var(--color-gray-400);
+          position: absolute;
+          left: 0;
+          top: -20px;
         }
         &.error{
           .input{
@@ -98,6 +108,9 @@
                   }
               }
           }
+        }
+        &.__label{
+          margin: 34px 0 0;
         }
     }
     &-check{
@@ -197,6 +210,12 @@
       height: 40px;
       font-size: 12px;
       padding: 0 14px;
+    }
+    &-sm{
+      height: 40px;
+      border-color: var(--color-gray-200);
+      padding: 0 8px;
+      font-size: 12px;
     }
     &:focus{
       outline: none;

@@ -55,17 +55,148 @@
             Nýr Vefur
           </a>
           <div class="nav-user-tabs">
-            <button class="link link-icon">
-              <span class="icon">
-                <img src="../images/icons/notifications.svg" alt="">
-                <span class="notification-count">8</span>
-              </span>
-            </button>
-            <button class="link link-icon">
-              <span class="icon">
-                <img src="../images/icons/user.svg" alt="">
-              </span>
-            </button>
+            <div class="popup">
+              <button class="link link-icon popup-btn">
+                <span class="icon">
+                  <img src="../images/icons/notifications.svg" class="icon-image" alt="Notification">
+                  <img src="../images/icons/notifications-blue.svg" class="icon-image icon-image-active" alt="Notification">
+                  <span class="notification-count">8</span>
+                </span>
+              </button>
+              <div class="popup-box">
+                <div class="popup-box-header">
+                  <p class="title-16">Áminningar</p>
+                  <div class="popup-box-close"></div>
+                </div>
+                <div class="popup-box-action">
+                  <a href="#" class="link link-ttu">Hreinsa lista</a>
+                </div>
+                <div class="popup-box-content">
+                  <div class="notification-list">
+                    <div class="notification-list-item">
+                      <div class="event">
+                        <p class="event-date">15:30 03.11.20</p>
+                        <p class="event-title">Sölutorgið</p>
+                        <p class="event-description">Flýtiminni hreinsað</p>
+                      </div>
+                    </div>
+                    <div class="notification-list-item">
+                      <div class="event">
+                        <p class="event-date">11:05 02.11.20</p>
+                        <p class="event-title">Bílasíðan</p>
+                        <p class="event-description">Flýtiminni hreinsað</p>
+                      </div>
+                      <a href="#" class="btn btn-border btn-xs">Sjá nánar</a>
+                    </div>
+                    <div class="notification-list-item">
+                      <div class="event">
+                        <p class="event-date">13:14 01.11.20</p>
+                        <p class="event-title">Sölutorgið</p>
+                        <p class="event-description">Flýtiminni hreinsað</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup">
+              <button class="link link-icon popup-btn">
+                <span class="icon">
+                  <img src="../images/icons/user.svg" class="icon-image" alt="User">
+                  <img src="../images/icons/user-blue.svg" class="icon-image icon-image-active" alt="User">
+                </span>
+              </button>
+              <div class="popup-box">
+                <div class="popup-box-content">
+                  <div class="user-carousel" id="user-carousel">
+                    <div class="user-carousel-slide">
+                      <div class="popup-box-header">
+                        <p class="title-16">Notandi</p>
+                        <div class="popup-box-close"></div>
+                      </div>
+                      <div class="user-link">
+                        <a href="#" class="link">Búa til nýja síðu</a>
+                      </div>
+                      <div class="user-link">
+                        <a href="#" class="link" data-carousel="#user-carousel" data-slide="1">Notendaupplýsingar</a>
+                      </div>
+                      <div class="popup-box-action">
+                        <a href="#" class="link link-ttu">
+                          <svg class="icon"><use xlink:href="images/sprite.svg#logout"></use></svg>
+                          ÚTskrá
+                        </a>
+                      </div>
+                    </div>
+                    <div class="user-carousel-slide">
+                      <div class="user-data">
+                        <div class="user-data-header">
+                          <div class="link link-back" data-carousel="#user-carousel" data-slide="0">
+                            <svg class="icon"><use xlink:href="images/sprite.svg#back-arrow"></use></svg>
+                          </div>
+                          <div class="popup-box-close"></div>
+                        </div>
+                        <div class="user-data-form">
+                          <form>
+                            <div class="input-container __label">
+                              <span class="input-container-label">Nafn notanda</span>
+                              <input type="text" class="input input-sm" value="Róbert Einarsson">
+                              <span class="input-container-message">Rangt netfang eða lykilorð</span>
+                              <div class="input-container-btn">
+                                <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+                              </div>
+                            </div>
+                            <div class="input-container __label">
+                              <span class="input-container-label">Netfang</span>
+                              <input type="text" class="input input-sm" value="robert@siminn.is">
+                              <span class="input-container-message">Rangt netfang eða lykilorð</span>
+                              <div class="input-container-btn">
+                                <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+                              </div>
+                            </div>
+                            <div class="input-container __label">
+                              <span class="input-container-label">Núverandi lykilorð</span>
+                              <input type="password" class="input input-sm">
+                              <span class="input-container-message">Rangt netfang eða lykilorð</span>
+                              <div class="input-container-btn">
+                                <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+                              </div>
+                            </div>
+                            <div class="input-container __label">
+                              <span class="input-container-label">Nýtt lykilorð</span>
+                              <input type="password" class="input input-sm">
+                              <span class="input-container-message">Rangt netfang eða lykilorð</span>
+                              <div class="input-container-btn">
+                                <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+                              </div>
+                            </div>
+                            <div class="input-container __label">
+                            <span class="input-container-label">Nýtt lykilorð aftur</span>
+                            <input type="password" class="input input-sm">
+                            <span class="input-container-message">Rangt netfang eða lykilorð</span>
+                            <div class="input-container-btn">
+                              <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+                            </div>
+                          </div>
+                            <button class="btn btn-md">Vista</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup-box-detail">
+                  <p class="title-10 ttu">Aðstoð</p>
+                  <a href="#" class="link">
+                    <svg class="icon"><use xlink:href="images/sprite.svg#envelope-letter"></use></svg>
+                    Vefold@vefold.is
+                  </a>
+                  <a href="#" class="link">
+                    <svg class="icon"><use xlink:href="images/sprite.svg#phone-circle"></use></svg>
+                    416 0110
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
