@@ -1,0 +1,26 @@
+.create{
+  padding: 80px 0;
+    &-carousel{
+        &-slide{
+        }
+    }
+    &-box{
+      max-width: 816px;
+      margin: 0 auto;
+        &-title{
+          max-width: 550px;
+          margin-bottom: 38px;
+        }
+        &-content{
+          overflow: hidden;
+        }
+        .input-container{
+            &-label{
+              top: -22px;
+            }
+            &.__label{
+              margin-top: 42px;
+            }
+        }
+    }
+}

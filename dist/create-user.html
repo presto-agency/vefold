@@ -1,8 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+  <title>Vefold</title>
+
+<!--  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">-->
+<!--  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">-->
+<!--  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">-->
+<!--  <link rel="manifest" href="images/favicon/site.webmanifest">-->
+
+  <meta name="msapplication-TileColor" content="#333333">
+  <meta name="theme-color" content="#0093F5">
+  <meta name="msapplication-navbutton-color" content="#0093F5">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#0093F5">
+
+  <link rel="preload" href="fonts/GothamSSm-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/GothamSSm-Light.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/GothamSSm-Book.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/GothamSSm-Book.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/GothamSSm-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/GothamSSm-Medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/GothamSSm-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/GothamSSm-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+
+  <link rel="prefetch" href="css/styles.min.css" as="style">
+  <link rel="prefetch" href="js/scripts.min.js" as="script">
+
+  <link rel="stylesheet" href="css/styles.min.css">
+
+</head>
+
+<body>
+
+<main id="wrapper">
 <header class="header">
   <div class="container">
     <div class="header-panel">
       <a href="index.html" class="header-panel-logo">
-        <img src="../images/Veföld_Logo.svg" alt="Veföld" />
+        <img src="../images/Veföld_Logo.svg" alt="Veföld">
       </a>
       <div class="header-panel-nav">
         <div class="nav">
@@ -15,7 +53,7 @@
           <a href="create-user.html" class="link link-ttu">
             <svg class="icon __stroke hidden-sm"><use xlink:href="images/sprite.svg#add"></use></svg>
             <span class="icon hidden display-sm">
-              <img src="../images/icons/add-circle.svg" alt="Nýr Vefur" />
+              <img src="../images/icons/add-circle.svg" alt="Nýr Vefur">
             </span>
             <span class="link-title hidden-sm">Nýr Vefur</span>
           </a>
@@ -23,8 +61,8 @@
             <div class="popup">
               <button class="link link-icon popup-btn">
                 <span class="icon">
-                  <img src="../images/icons/notifications.svg" class="icon-image" alt="Notification" />
-                  <img src="../images/icons/notifications-blue.svg" class="icon-image icon-image-active" alt="Notification" />
+                  <img src="../images/icons/notifications.svg" class="icon-image" alt="Notification">
+                  <img src="../images/icons/notifications-blue.svg" class="icon-image icon-image-active" alt="Notification">
                   <span class="notification-count">8</span>
                 </span>
               </button>
@@ -67,8 +105,8 @@
             <div class="popup">
               <button class="link link-icon popup-btn">
                 <span class="icon">
-                  <img src="../images/icons/user.svg" class="icon-image" alt="User" />
-                  <img src="../images/icons/user-blue.svg" class="icon-image icon-image-active" alt="User" />
+                  <img src="../images/icons/user.svg" class="icon-image" alt="User">
+                  <img src="../images/icons/user-blue.svg" class="icon-image icon-image-active" alt="User">
                 </span>
               </button>
               <div class="popup-box">
@@ -115,7 +153,7 @@
                           <form>
                             <div class="input-container __label">
                               <span class="input-container-label">Nafn notanda</span>
-                              <input type="text" class="input input-sm" value="Róbert Einarsson" />
+                              <input type="text" class="input input-sm" value="Róbert Einarsson">
                               <span class="input-container-message">Rangt netfang eða lykilorð</span>
                               <div class="input-container-btn">
                                 <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
@@ -123,7 +161,7 @@
                             </div>
                             <div class="input-container __label">
                               <span class="input-container-label">Netfang</span>
-                              <input type="text" class="input input-sm" value="robert@siminn.is" />
+                              <input type="text" class="input input-sm" value="robert@siminn.is">
                               <span class="input-container-message">Rangt netfang eða lykilorð</span>
                               <div class="input-container-btn">
                                 <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
@@ -131,7 +169,7 @@
                             </div>
                             <div class="input-container __label">
                               <span class="input-container-label">Núverandi lykilorð</span>
-                              <input type="password" class="input input-sm" />
+                              <input type="password" class="input input-sm">
                               <span class="input-container-message">Rangt netfang eða lykilorð</span>
                               <div class="input-container-btn">
                                 <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
@@ -139,7 +177,7 @@
                             </div>
                             <div class="input-container __label">
                               <span class="input-container-label">Nýtt lykilorð</span>
-                              <input type="password" class="input input-sm" />
+                              <input type="password" class="input input-sm">
                               <span class="input-container-message">Rangt netfang eða lykilorð</span>
                               <div class="input-container-btn">
                                 <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
@@ -147,7 +185,7 @@
                             </div>
                             <div class="input-container __label">
                             <span class="input-container-label">Nýtt lykilorð aftur</span>
-                            <input type="password" class="input input-sm" />
+                            <input type="password" class="input input-sm">
                             <span class="input-container-message">Rangt netfang eða lykilorð</span>
                             <div class="input-container-btn">
                               <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
@@ -168,3 +206,102 @@
     </div>
   </div>
 </header>
+<section class="section create">
+  <div class="container">
+    <div class="create-carousel" id="create-carousel">
+      <div class="create-carousel-slide">
+        <div class="create-box">
+          <div class="create-box-title">
+            <h1 class="title-2">Búðu til þinn WordPress notanda</h1>
+          </div>
+          <div class="create-box-content">
+            <div class="input-container __label __xl">
+              <span class="input-container-label">WordPress Stjórnandi</span>
+              <input type="text" class="input input-sm" value="Bobby Johnson">
+              <!--              <span class="input-container-message">Rangt netfang eða lykilorð</span>-->
+              <div class="input-container-btn">
+                <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+              </div>
+            </div>
+            <div class="input-container __label __xl error">
+              <span class="input-container-label">Netfang</span>
+              <input type="text" class="input input-sm" value="robertQsiminn.is">
+              <!--              <span class="input-container-message">Rangt netfang eða lykilorð</span>-->
+              <div class="input-container-btn">
+                <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+              </div>
+            </div>
+            <div class="input-container __label __xl">
+              <span class="input-container-message attention __wrong">Slæmt</span>
+              <span class="input-container-label">Lykilorð</span>
+              <input type="password" class="input input-sm" value="robertQsiminn.is">
+              <!--              <span class="input-container-message">Rangt netfang eða lykilorð</span>-->
+              <div class="input-container-btn">
+                <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+              </div>
+            </div>
+            <div class="input-container __label __xl">
+              <span class="input-container-message attention __check">
+                <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
+              </span>
+              <span class="input-container-label">Lykilorð aftur</span>
+              <input type="password" class="input input-sm" value="robertQsiminn.is">
+              <!--              <span class="input-container-message">Rangt netfang eða lykilorð</span>-->
+              <div class="input-container-btn">
+                <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="create-carousel-slide">
+        <div class="create-box">
+          Step 2
+        </div>
+      </div>
+      <div class="create-carousel-slide">
+        <div class="create-box">
+          Step 2
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-contacts">
+      <a href="index.html" class="footer-contacts-logo">
+        <img src="../images/Veföld_Logo_Gray.svg" alt="Veföld">
+      </a>
+      <div class="footer-contacts-list">
+        <a href="#" class="link">
+          <svg class="icon"><use xlink:href="images/sprite.svg#envelope-letter"></use></svg>
+          Vefold@vefold.is
+        </a>
+        <a href="#" class="link">
+          <svg class="icon"><use xlink:href="images/sprite.svg#phone-circle"></use></svg>
+          416 0110
+        </a>
+      </div>
+    </div>
+    <hr class="hr">
+    <div class="footer-nav">
+      <div class="footer-nav-copy">
+        <span class="copy copyright">&copy; 2016-2020 – Veföld ehf.</span>
+        <span class="copy">Kt. 6803140390</span>
+        <span class="copy">Sóltúni 30, 105 Reykjavík</span>
+      </div>
+      <div class="footer-nav-list">
+        <a href="#" class="link">Námskeið</a>
+        <a href="#" class="link">Verðskrá</a>
+        <a href="#" class="link">Skilmálar</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</main>
+
+<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

@@ -81,6 +81,12 @@ $('#user-carousel').slick({
     swipe: false
 });
 
+$('#create-carousel').slick({
+    infinite: false,
+    arrows: false,
+    dots: true
+});
+
 /*
 Move carousel on click
  */
