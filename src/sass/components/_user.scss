@@ -3,13 +3,53 @@
       margin: 0 -26px 0 -21px;
         &-slide{
           padding: 0 26px 0 21px;
+          position: relative;
+          min-height: calc(100vh - 132px);
+            @include d(767){
+              min-height: calc(100vh - 86px);
+            }
+            @include d(480){
+              min-height: calc(100vh - 96px);
+              padding: 0 16px;
+            }
+            @include dh(460){
+              min-height: 340px;
+            }
+        }
+        @include d(480){
+          margin: 0 -16px;
         }
     }
     &-link{
       padding: 11px 0;
-      border-bottom: 1px var(--color-gray-200) solid;
         .link{
           font-size: 12px;
+            @include d(480){
+              font-size: 14px;
+            }
+        }
+        @include m(481){
+          border-bottom: 1px var(--color-gray-200) solid;
+        }
+        @include d(480){
+          position: relative;
+          margin-bottom: -1px;
+          padding: 25px 0;
+            &:before,
+            &:after{
+              content: '';
+              position: absolute;
+              left: -16px;
+              right: -16px;
+              height: 1px;
+              background-color: var(--color-gray-200);
+            }
+            &:before{
+              top: 0;
+            }
+            &:after{
+              bottom: 0;
+            }
         }
     }
     &-data{
@@ -24,6 +64,13 @@
               left: -21px;
               right: -26px;
               background-color: var(--color-gray-200);
+                @include d(480){
+                  left: -16px;
+                  right: -16px;
+                }
+            }
+            @include d(480){
+              padding-bottom: 24px;
             }
         }
         &-form{
@@ -37,6 +84,9 @@
                     padding-right: 8px;
                   }
                 }
+            }
+            @include d(480){
+              padding: 8px 0;
             }
         }
     }

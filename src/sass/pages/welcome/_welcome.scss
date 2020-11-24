@@ -18,10 +18,36 @@
               background-size: contain;
               background-position: center;
               background-image: url(../images/arrow.svg);
+                @include d(992){
+                  right: -92px;
+                }
+                @include d(767){
+                  right: 50%;
+                  top: -113px;
+                  width: 84px;
+                  height: 95px;
+                  transform: scaleX(-1) rotate(-73deg) translateY(-50%);
+                }
+                @include d(480){
+                  top: -121px;
+                }
             }
+        }
+        @include d(480){
+          margin: 21px 0 15px;
         }
     }
     &-subtitle{
       text-align: center;
+        @include d(480){
+          padding: 0 40px;
+        }
+    }
+    @include d(767){
+      padding: 147px 0 98px;
+    }
+    @include d(480){
+      padding: 155px 0 98px;
+      min-height: calc(100vh - 178px);
     }
 }

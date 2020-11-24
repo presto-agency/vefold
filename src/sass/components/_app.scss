@@ -11,6 +11,15 @@ h2{
   line-height: 1.333em;
   letter-spacing: -.03em;
   color: var(--color-gray-600);
+    @include d(767){
+      font-size: 42px;
+    }
+    @include d(575){
+      font-size: 38px;
+    }
+    @include d(480){
+      font-size: 32px;
+    }
 }
 
 h3{
@@ -130,6 +139,10 @@ h5{
       line-height: 24px;
       font-size: 10px;
       padding: 0 30px;
+        @include d(480){
+          height: 24px;
+          line-height: 24px;
+        }
     }
     &-md{
       height: 40px;
@@ -194,6 +207,15 @@ h5{
           height: 24px;
           display: inline-block;
           position: relative;
+          margin-right: 0;
+            @include d(767){
+              width: 20px;
+              height: 20px;
+            }
+            @include d(480){
+              width: 16px;
+              height: 16px;
+            }
         }
         &.is-active{
           background-color: var(--color-white);
@@ -208,6 +230,14 @@ h5{
           &:hover{
             color: inherit;
           }
+        }
+        @include d(767){
+          height: 50px;
+          width: 62px;
+        }
+        @include d(480){
+          height: 44px;
+          width: 40px;
         }
     }
     &-back{
@@ -249,15 +279,22 @@ h5{
   position: relative;
   font-size: 10px;
     &:not(:last-child){
-      padding-right: 17px;
-        &:before{
-          content: '';
-          position: absolute;
-          width: 2px;
-          height: 2px;
-          background-color: currentColor;
-          right: 5px;
-          top: 5px;
+      @include m(481){
+        padding-right: 17px;
+          &:before{
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: currentColor;
+            right: 5px;
+            top: 5px;
+          }
+      }
+    }
+    @include d(480){
+        &:not(.copyright){
+          display: none;
         }
     }
 }
@@ -273,6 +310,24 @@ h5{
       font-size: 16px;
       @extend .bold;
       color: var(--color-gray-600);
+    }
+}
+
+.hidden{
+  display: none;
+    &-sm{
+      @include d(767){
+        display: none;
+      }
+    }
+}
+
+.display{
+  display: block;
+    &-sm{
+      @include d(767){
+        display: block;
+      }
     }
 }
 

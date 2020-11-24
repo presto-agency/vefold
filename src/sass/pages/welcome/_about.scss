@@ -23,6 +23,29 @@
                 padding-left: 0;
               }
             }
+            @include d(1300){
+              padding: 40px 25px 33px 30px;
+            }
+            @include d(1200){
+              padding: 40px 20px 33px 20px;
+            }
+            @include d(992){
+              width: 50%;
+                &:nth-child(2n){
+                  border-right: none;
+                }
+                &:last-child,
+                &:nth-last-child(2){
+                  border-bottom: none;
+                }
+            }
+            @include d(767){
+              width: 100%;
+              border-right: none;
+                &:nth-last-child(2){
+                  border-bottom: 1px var(--color-gray-200) solid;
+                }
+            }
         }
     }
     &-box{
@@ -61,5 +84,14 @@
               overflow: hidden;
             }
         }
+    }
+    @include d(1200){
+      padding: 42px 0 180px;
+    }
+    @include d(767){
+      padding: 40px 0 80px;
+    }
+    @include d(480){
+      display: none;
     }
 }

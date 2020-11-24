@@ -6,27 +6,32 @@
     &-panel{
       display: flex;
       align-items: center;
-      padding: 0 0 0 16px;
         &-logo{
           max-width: 78px;
           height: 36px;
           min-width: 78px;
-          margin-right: 32px;
           display: inline-flex;
           align-items: center;
           justify-content: flex-start;
           position: relative;
-            &:before{
-              content: '';
-              position: absolute;
-              top: 0;
-              right: -33px;
-              width: 1px;
-              bottom: 0;
-              background-color: var(--color-theme-secondary);
+            @include m(481){
+              margin-right: 32px;
+                &:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: -33px;
+                width: 1px;
+                bottom: 0;
+                background-color: var(--color-theme-secondary);
+              }
             }
             img{
               margin-top: -2px;
+            }
+            @include d(480){
+              max-width: 74px;
+              min-width: 74px;
             }
         }
         &-nav{
@@ -36,6 +41,9 @@
           padding-left: 32px;
           width: 100%;
         }
+        @include m(481){
+          padding: 0 0 0 16px;
+        }
     }
     .container{
       max-width: 1440px;
@@ -44,6 +52,8 @@
 }
 
 .nav{
+  display: flex;
+  align-items: center;
     &-user{
       display: flex;
       align-items: center;
@@ -53,9 +63,51 @@
           display: inline-flex;
           align-items: center;
           justify-content: flex-end;
+            .popup{
+                @include d(480){
+                  position: static;
+                }
+            }
+            @include d(767){
+              margin-left: 25px;
+            }
+            @include d(480){
+              margin-left: 16px;
+            }
         }
-        .link-icon{
-          border-left: 1px var(--color-theme-secondary) solid;
+        & > .link{
+            &-icon{
+              @include m(481){
+                border-left: 1px var(--color-theme-secondary) solid;
+              }
+            }
+            &-ttu{
+                @include d(767){
+                  .icon{
+                    width: 20px;
+                    height: 21px;
+                    margin-right: 0;
+                      img{
+                        width: 100%;
+                        height: 100%;
+                      }
+                  }
+                }
+                @include d(480){
+                  .icon{
+                    width: 16px;
+                    height: 17px;
+                  }
+                }
+            }
+            &-title{
+              @include d(767){
+                display: none;
+              }
+            }
+        }
+        @include d(767){
+          width: 100%;
         }
     }
     .link{
@@ -63,7 +115,19 @@
             .icon{
               width: 16px;
               height: 16px;
+                @include d(575){
+                  width: 20px;
+                  height: 20px;
+                }
             }
         }
+        &-title{
+            @include d(575){
+              display: none;
+            }
+        }
+    }
+    @include d(480){
+      display: none;
     }
 }

@@ -13,12 +13,25 @@
       text-align: center;
       line-height: 13px;
       @extend .bold;
+      color: var(--color-white);
+        @include d(480){
+          width: 11px;
+          height: 11px;
+          font-size: 7px;
+          line-height: 11px;
+        }
     }
     &-list{
       padding: 12px 0;
         &-item{
           padding: 20px 0 15px;
           border-top: 1px var(--color-gray-200) solid;
+            @include d(480){
+              padding: 36px 0 15px;
+            }
+        }
+        @include d(480){
+          padding: 30px 0;
         }
     }
 }

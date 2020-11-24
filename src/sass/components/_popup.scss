@@ -15,12 +15,13 @@
       width: 220px;
       height: calc(100vh - 60px);
       //height: auto;
-      min-height: 730px;
+      //min-height: 730px;
       z-index: 1;
       cursor: default;
       text-align: left;
-      padding: 36px 26px 180px 21px;
+      padding: 36px 26px 36px 21px;
       overflow-y: auto;
+      overflow-x: hidden;
         &-header{
           width: 100%;
           display: block;
@@ -29,6 +30,17 @@
           margin-bottom: 18px;
             & + .popup-box-action{
               margin-top: 37px;
+                @include d(480){
+                  margin-top: 36px;
+                }
+            }
+            .title-16{
+              @include d(480){
+                font-size: 18px;
+              }
+            }
+            @include d(480){
+              margin-bottom: 25px;
             }
         }
         &-close{
@@ -49,6 +61,12 @@
                 transform: rotate(90deg);
               }
             }
+            @include d(480){
+              width: 22px;
+              height: 22px;
+              background-size: 22px;
+              right: -8px;
+            }
         }
         &-action{
           display: block;
@@ -59,16 +77,22 @@
             .link{
               font-size: 10px;
               letter-spacing: .04em;
+                @include d(480){
+                  font-size: 12px;
+                }
+            }
+            @include d(480){
+              margin-top: 27px;
             }
         }
         &-detail{
-          position: absolute;
-          bottom: 0;
-          left: 0;
           width: 100%;
           display: flex;
           flex-direction: column;
-          padding: 10px 23px 70px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          padding: 10px 23px 34px;
             .link{
               @extend .book;
               margin-top: 18px;
@@ -79,6 +103,22 @@
             .title-10{
               margin-bottom: 5px;
             }
+            @include d(480){
+              padding: 0 16px;
+            }
+        }
+        &.to-right{
+          left: auto;
+          right: 0;
+          margin-left: 0;
+        }
+        @include d(767){
+          height: calc(100vh - 50px);
+        }
+        @include d(480){
+          width: 100vw;
+          height: calc(100vh - 44px);
+          padding: 26px 16px;
         }
     }
     .hr{
@@ -95,6 +135,9 @@
                 background-color: var(--color-theme);
                 color: var(--color-white);
               }
+            }
+            @include d(480){
+              margin-top: 16px;
             }
         }
         &-md{
