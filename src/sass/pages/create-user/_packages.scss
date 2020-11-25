@@ -1,0 +1,103 @@
+.packages{
+  display: flex;
+  margin: 0 -8px;
+    &-box{
+      flex: 1;
+      padding: 20px 8px 10px;
+    }
+}
+
+.package{
+  background-color: var(--color-white);
+  border-radius: 4px;
+  min-height: 336px;
+  text-align: center;
+  padding: 50px 20px 30px;
+  display: block;
+  position: relative;
+    &-title{
+      margin-bottom: 20px;
+      display: block;
+    }
+    &-description{
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px var(--color-gray-200) solid;
+      display: block;
+      line-height: 1.72em;
+    }
+    &-price{
+      color: var(--color-theme);
+      padding: 3px 0 5px;
+      display: block;
+        &-value{
+          font-size: 48px;
+          letter-spacing: -.02em;
+          line-height: 0.83em;
+          @extend .medium;
+        }
+        &-label{
+          font-size: 16px;
+        }
+    }
+    &-detail{
+      color: var(--color-gray-500);
+      padding: 3px 30px;
+      display: block;
+        p{
+          line-height: 1.7em;
+        }
+    }
+    &-checked{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 1px var(--color-gray-200) solid;
+      border-radius: 4px;
+      pointer-events: none;
+        &-icon{
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          border: 2px var(--color-warning-100) solid;
+          left: 50%;
+          top: -19px;
+          transform: translateX(-50%);
+          display: block;
+          position: absolute;
+          padding-top: 7px;
+          text-align: center;
+          background-color: var(--color-white);
+          filter: drop-shadow(0px 2px 3px rgba(52, 52, 52, 0.2));
+          opacity: 0;
+          transition: opacity .1s ease-out;
+            .icon{
+              width: 16px;
+              height: 16px;
+              fill: var(--color-warning-100);
+            }
+        }
+    }
+    .input-check{
+        &:checked{
+            & ~ .package{
+                &-checked {
+                  border-color: var(--color-warning-100);
+                  border-width: 2px;
+                    .package-checked-icon{
+                      opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    @include hover(991){
+      &:hover{
+        .package-checked{
+          border-color: var(--color-warning-100);
+        }
+      }
+    }
+}

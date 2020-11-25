@@ -1,12 +1,32 @@
 .create{
-  padding: 80px 0;
+  padding: 80px 0 46px;
     &-carousel{
+      padding-bottom: 40px;
         &-slide{
+          pointer-events: none;
+            .create-box{
+              transform: translateX(-20px);
+            }
+            &.slick-current{
+              pointer-events: auto;
+                .create-box{
+                  transform: translateX(0);
+                }
+                & ~ .create-carousel-slide{
+                    .create-box{
+                      transform: translateX(20px);
+                    }
+                }
+            }
+        }
+        .slick-dots{
+          margin-top: 54px;
         }
     }
     &-box{
       max-width: 816px;
       margin: 0 auto;
+      transition: transform .4s ease-out;
         &-title{
           max-width: 550px;
           margin-bottom: 38px;
@@ -20,6 +40,16 @@
             }
             &.__label{
               margin-top: 42px;
+            }
+        }
+    }
+    .carousel-nav{
+      max-width: 816px;
+        .link{
+            @include hover(991){
+              &:hover{
+                color: var(--color-gray-300);
+              }
             }
         }
     }

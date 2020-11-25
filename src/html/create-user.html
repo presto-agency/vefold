@@ -1,8 +1,8 @@
 //= components/_head.html
-//= components/_header.html
+//= components/_header-without-notifications.html
 <section class="section create">
   <div class="container">
-    <div class="create-carousel" id="create-carousel">
+    <div class="create-carousel carousel" id="create-carousel">
       <div class="create-carousel-slide">
         <div class="create-box">
           //= create-steps/_step-1.html
@@ -10,13 +10,29 @@
       </div>
       <div class="create-carousel-slide">
         <div class="create-box">
-          Step 2
+          //= create-steps/_step-2.html
         </div>
       </div>
       <div class="create-carousel-slide">
         <div class="create-box">
-          Step 2
+          //= create-steps/_step-3.html
         </div>
+      </div>
+      <div class="create-carousel-slide">
+        <div class="create-box">
+          //= create-steps/_step-4.html
+        </div>
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <div class="carousel-nav-part">
+        <button class="link link-ttu" data-carousel="#create-carousel" data-slide="prev">
+          <svg class="icon"><use xlink:href="images/sprite.svg#back"></use></svg>
+          til baka
+        </button>
+      </div>
+      <div class="carousel-nav-part">
+        <button class="btn btn-md" data-carousel="#create-carousel" data-slide="next">Áfram</button>
       </div>
     </div>
   </div>

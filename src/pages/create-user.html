@@ -63,7 +63,7 @@
                 <span class="icon">
                   <img src="../images/icons/notifications.svg" class="icon-image" alt="Notification">
                   <img src="../images/icons/notifications-blue.svg" class="icon-image icon-image-active" alt="Notification">
-                  <span class="notification-count">8</span>
+<!--                  <span class="notification-count">8</span>-->
                 </span>
               </button>
               <div class="popup-box">
@@ -71,32 +71,16 @@
                   <p class="title-16">Áminningar</p>
                   <div class="popup-box-close"></div>
                 </div>
-                <div class="popup-box-action">
-                  <a href="#" class="link link-ttu">Hreinsa lista</a>
-                </div>
                 <div class="popup-box-content">
                   <div class="notification-list">
-                    <div class="notification-list-item">
-                      <div class="event">
-                        <p class="event-date">15:30 03.11.20</p>
-                        <p class="event-title">Sölutorgið</p>
-                        <p class="event-description">Flýtiminni hreinsað</p>
+                    <div class="notification-list-empty">
+                      <div class="empty">
+                        <span class="icon">
+                          <img src="../images/icons/notifications-blue.svg" class="icon-image" alt="Notification">
+                          <span class="notification-count">0</span>
+                        </span>
                       </div>
-                    </div>
-                    <div class="notification-list-item">
-                      <div class="event">
-                        <p class="event-date">11:05 02.11.20</p>
-                        <p class="event-title">Bílasíðan</p>
-                        <p class="event-description">Flýtiminni hreinsað</p>
-                      </div>
-                      <a href="#" class="btn btn-border btn-xs">Sjá nánar</a>
-                    </div>
-                    <div class="notification-list-item">
-                      <div class="event">
-                        <p class="event-date">13:14 01.11.20</p>
-                        <p class="event-title">Sölutorgið</p>
-                        <p class="event-description">Flýtiminni hreinsað</p>
-                      </div>
+                      <p><strong>Þú ert ekki með neinar tilkynningar</strong></p>
                     </div>
                   </div>
                 </div>
@@ -184,13 +168,13 @@
                               </div>
                             </div>
                             <div class="input-container __label">
-                            <span class="input-container-label">Nýtt lykilorð aftur</span>
-                            <input type="password" class="input input-sm">
-                            <span class="input-container-message">Rangt netfang eða lykilorð</span>
-                            <div class="input-container-btn">
-                              <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+                              <span class="input-container-label">Nýtt lykilorð aftur</span>
+                              <input type="password" class="input input-sm">
+                              <span class="input-container-message">Rangt netfang eða lykilorð</span>
+                              <div class="input-container-btn">
+                                <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+                              </div>
                             </div>
-                          </div>
                             <button class="btn btn-md">Vista</button>
                           </form>
                         </div>
@@ -208,7 +192,7 @@
 </header>
 <section class="section create">
   <div class="container">
-    <div class="create-carousel" id="create-carousel">
+    <div class="create-carousel carousel" id="create-carousel">
       <div class="create-carousel-slide">
         <div class="create-box">
           <div class="create-box-title">
@@ -256,13 +240,132 @@
       </div>
       <div class="create-carousel-slide">
         <div class="create-box">
-          Step 2
+          <div class="create-box-title">
+            <h2 class="title-2">Veldu pakka sem hentar þér</h2>
+          </div>
+          <div class="create-box-content">
+            <div class="packages">
+              <div class="packages-box">
+                <label class="package">
+                  <input type="radio" class="input input-check" name="package" value="Léttvigt">
+                  <span class="package-checked">
+                    <span class="package-checked-icon">
+                      <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
+                    </span>
+                  </span>
+                  <span class="package-title title-4">Léttvigt</span>
+                  <span class="package-description">Tilvalið fyrir þá sem eru að taka sín fyrstu skref með WordPress, ætal að setja upp einstaklingssíðu eða blogg.</span>
+                  <span class="package-price">
+                    <span><span class="package-price-value">2.480</span><span class="package-price-label">kr./mán.</span></span>
+                  </span>
+                </label>
+              </div>
+              <div class="packages-box">
+                <label class="package">
+                  <input type="radio" class="input input-check" name="package" value="Millivigt">
+                  <span class="package-checked">
+                    <span class="package-checked-icon">
+                      <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
+                    </span>
+                  </span>
+                  <span class="package-title">
+                    <span class="title-4">Millivigt</span>
+                  </span>
+                  <span class="package-description">
+                    <span>Tilvalið fyrir þá sem eru að taka sín fyrstu skref með WordPress, ætal að setja upp einstaklingssíðu eða blogg.</span>
+                  </span>
+                  <span class="package-price">
+                    <span><span class="package-price-value">4.960</span><span class="package-price-label">kr./mán.</span></span>
+                  </span>
+                </label>
+              </div>
+              <div class="packages-box">
+                <label class="package">
+                  <input type="radio" class="input input-check" name="package" value="Þungavigt">
+                  <span class="package-checked">
+                    <span class="package-checked-icon">
+                      <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
+                    </span>
+                  </span>
+                  <span class="package-title">
+                    <span class="title-4">Þungavigt</span>
+                  </span>
+                  <span class="package-description">
+                    <span>Tilvalið fyrir þá sem eru að taka sín fyrstu skref með WordPress, ætal að setja upp einstaklingssíðu eða blogg.</span>
+                  </span>
+                  <span class="package-detail">
+                    <span><strong>Við höfum samband við þig!</strong></span>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="create-carousel-slide">
         <div class="create-box">
-          Step 2
+          <div class="create-box-title">
+            <h2 class="title-2">Hvernig viltu greiða fyrir hýsinguna?</h2>
+          </div>
+          <div class="create-box-content">
+            <div class="payment-type">
+              <div class="payment-type-box">
+                <label class="render">
+                  <input type="radio" class="input input-check" name="payment-type" value="Mánaðarlegar greiðsur">
+                  <span class="render-checked">
+                    <span class="render-checked-icon">
+                      <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
+                    </span>
+                  </span>
+                  <span class="render-title title-4">Mánaðarlegar greiðsur</span>
+                  <span class="render-price">
+                    <span class="render-price-value">2.480</span>
+                    <span class="render-price-label">kr.</span>
+                  </span>
+                </label>
+              </div>
+              <div class="payment-type-box">
+                <label class="render">
+                  <input type="radio" class="input input-check" name="payment-type" value="Árlegar greiðslur">
+                  <span class="render-checked">
+                    <span class="render-checked-icon">
+                      <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
+                    </span>
+                  </span>
+                  <span class="render-title title-4">Árlegar greiðslur</span>
+                  <span class="render-price">
+                    <span class="render-price-value">53.568</span>
+                    <span class="render-price-label">kr.</span>
+                  </span>
+                  <span class="render-detail">10% afsláttur</span>
+                </label>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="create-carousel-slide">
+        <div class="create-box">
+          <div class="create-box-title">
+            <h2 class="title-2">Hvernig viltu greiða?</h2>
+          </div>
+          <div class="create-box-content">
+            <div class="payment">
+          
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <div class="carousel-nav-part">
+        <button class="link link-ttu" data-carousel="#create-carousel" data-slide="prev">
+          <svg class="icon"><use xlink:href="images/sprite.svg#back"></use></svg>
+          til baka
+        </button>
+      </div>
+      <div class="carousel-nav-part">
+        <button class="btn btn-md" data-carousel="#create-carousel" data-slide="next">Áfram</button>
       </div>
     </div>
   </div>

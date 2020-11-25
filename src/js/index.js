@@ -84,7 +84,10 @@ $('#user-carousel').slick({
 $('#create-carousel').slick({
     infinite: false,
     arrows: false,
-    dots: true
+    dots: true,
+    fade: true,
+    speed: 400,
+    cssEase: 'ease-out'
 });
 
 /*
@@ -94,5 +97,14 @@ $('[data-carousel]').on('click', function (event) {
     event.preventDefault();
     const carousel = $(this).attr('data-carousel');
     const toSlide = $(this).attr('data-slide');
-    $(carousel).slick('slickGoTo', toSlide);
+    switch (toSlide) {
+        case 'prev':
+            $(carousel).slick('slickPrev');
+            break;
+        case 'next':
+            $(carousel).slick('slickNext');
+            break;
+        default:
+            $(carousel).slick('slickGoTo', toSlide);
+    }
 });
