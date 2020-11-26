@@ -42,6 +42,15 @@ h4{
   @extend .light;
   line-height: 1.25em;
   color: var(--color-gray-500);
+    @include d(767){
+      font-size: 28px;
+    }
+    @include d(575){
+      font-size: 26px;
+    }
+    @include d(480){
+      font-size: 24px;
+    }
 }
 
 h5{
@@ -50,6 +59,11 @@ h5{
   line-height: 1.333em;
   letter-spacing: -.01em;
   color: var(--color-gray-600);
+    strong{
+      @extend .medium;
+      font-size: 25px;
+      letter-spacing: -.02em;
+    }
     @include d(767){
       font-size: 20px;
     }
@@ -64,6 +78,17 @@ h5{
 
 strong{
   @extend .bold;
+}
+
+p{
+    .icon{
+      fill: currentColor;
+      width: 13px;
+      height: 13px;
+      margin-right: 8px;
+      position: relative;
+      top: 2px;
+    }
 }
 
 #wrapper{
@@ -164,6 +189,10 @@ strong{
       background-color: transparent;
       border-width: 2px;
     }
+}
+
+a.btn{
+  color: var(--color-white);
 }
 
 .link{
@@ -275,6 +304,9 @@ strong{
           opacity: 0;
         }
     }
+    &-down{
+      fill: var(--color-gray-400);
+    }
     &.__stroke{
       stroke: var(--color-white);
     }
@@ -316,6 +348,12 @@ strong{
       font-size: 10px;
       color: var(--color-gray-400);
       @extend .medium;
+      letter-spacing: .04em;
+    }
+    &-12{
+      font-size: 12px;
+      @extend .medium;
+      color: var(--color-gray-500);
       letter-spacing: .04em;
     }
     &-16{

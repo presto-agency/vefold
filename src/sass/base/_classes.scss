@@ -45,3 +45,20 @@
 .ttu{
   text-transform: uppercase;
 }
+
+.text{
+    &-right{
+      text-align: right;
+    }
+    &-center{
+      text-align: center;
+    }
+    &-left{
+      text-align: left;
+    }
+}
+
+.disabled{
+  opacity: .5;
+  pointer-events: none;
+}

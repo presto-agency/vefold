@@ -4,6 +4,17 @@
     &-box{
       flex: 1;
       padding: 20px 8px 10px;
+        @include d(767){
+          flex: none;
+          display: inline-block;
+          width: 233px;
+        }
+    }
+    @include d(767){
+      display: block;
+      white-space: nowrap;
+      overflow-x: auto;
+      margin: 0 -16px 0 -8px;
     }
 }
 
@@ -99,5 +110,11 @@
           border-color: var(--color-warning-100);
         }
       }
+    }
+    @include d(992){
+      padding: 50px 10px 20px;
+    }
+    @include d(767){
+      white-space: normal;
     }
 }

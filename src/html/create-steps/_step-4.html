@@ -1,8 +1,102 @@
-<div class="create-box-title">
-  <h2 class="title-2">Hvernig viltu greiða?</h2>
+<div class="payment-title">
+  <div class="payment-title-column">
+    <h2 class="title-2">Hvernig viltu greiða?</h2>
+    <h4 class="title-5"><strong>Millivigt:</strong> 4.960 kr./mán.</h4>
+  </div>
+  <div class="payment-title-column">
+    <div class="payment-list">
+      <img src="../images/payment/visa.svg" alt="Visa" />
+      <img src="../images/payment/mastercard.svg" alt="Mastercard" />
+      <img src="../images/payment/amex.svg" alt="Amex" />
+    </div>
+    <p class="title-12 ttu text-right">
+      <svg class="icon"><use xlink:href="images/sprite.svg#lock-password"></use></svg>DulkÓÐuÐ samskipti
+    </p>
+  </div>
 </div>
 <div class="create-box-content">
   <div class="payment">
-
+    <div class="payment-column">
+      <p class="title-14">Greiðandi</p>
+      <div class="input-container">
+        <input type="text" class="input" placeholder="Fullt nafn eða fyrirtæki" />
+        <div class="input-container-btn">
+          <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+        </div>
+      </div>
+      <div class="input-container">
+        <input type="text" class="input" placeholder="Kennitala" />
+        <div class="input-container-btn">
+          <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+        </div>
+      </div>
+      <div class="input-container">
+        <input type="text" class="input" placeholder="Heimilisfang" />
+        <div class="input-container-btn">
+          <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+        </div>
+      </div>
+      <div class="input-container">
+        <svg class="icon icon-down"><use xlink:href="images/sprite.svg#collapse-arrow"></use></svg>
+        <select name="municipality" class="select" required>
+          <option value="" disabled selected>Veldu bæjarfélag</option>
+          <option value="Bæjarfélag 1">Bæjarfélag 1</option>
+          <option value="Bæjarfélag 2">Bæjarfélag 2</option>
+          <option value="Bæjarfélag 3">Bæjarfélag 3</option>
+          <option value="Bæjarfélag 4">Bæjarfélag 4</option>
+          <option value="Bæjarfélag 5">Bæjarfélag 5</option>
+          <option value="Bæjarfélag 6">Bæjarfélag 6</option>
+        </select>
+      </div>
+    </div>
+    <div class="payment-column">
+      <p class="title-14">Kortaupplýsingar</p>
+      <div class="input-container">
+        <input type="text" class="input" placeholder="Fullt nafn eins og það er á korti" />
+        <div class="input-container-btn">
+          <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+        </div>
+      </div>
+      <div class="input-container">
+        <input type="text" class="input" placeholder="Kortanúmer án bila eða bandstrika" />
+        <div class="input-container-btn">
+          <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+        </div>
+      </div>
+      <div class="input-container-row">
+        <p>Gildistími</p>
+        <div class="input-container">
+          <svg class="icon icon-down"><use xlink:href="images/sprite.svg#collapse-arrow"></use></svg>
+          <select name="municipality" class="select">
+            <option value="Mánudagur" selected>Mán.</option>
+            <option value="Þriðjudagur">Þri.</option>
+            <option value="Miðvikudagur">Mið.</option>
+            <option value="Fimmtudagur">Fim.</option>
+            <option value="Föstudagur">Fös.</option>
+            <option value="Laugardagur">Lau.</option>
+            <option value="Sunnudagur">Sun.</option>
+          </select>
+        </div>
+        <div class="input-container">
+          <svg class="icon icon-down"><use xlink:href="images/sprite.svg#collapse-arrow"></use></svg>
+          <select name="municipality" class="select" required>
+            <option value="" disabled selected>Ár</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+          </select>
+        </div>
+      </div>
+      <div class="input-container">
+        <input type="text" class="input" placeholder="CVC númer" />
+        <div class="input-container-btn">
+          <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

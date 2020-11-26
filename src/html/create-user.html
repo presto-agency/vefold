@@ -24,14 +24,29 @@
         </div>
       </div>
     </div>
-    <div class="carousel-nav">
+    <div class="carousel-nav first-step">
       <div class="carousel-nav-part">
-        <button class="link link-ttu" data-carousel="#create-carousel" data-slide="prev">
+        <button class="link link-ttu carousel-nav-back" data-carousel="#create-carousel" data-slide="prev">
           <svg class="icon"><use xlink:href="images/sprite.svg#back"></use></svg>
           til baka
         </button>
       </div>
       <div class="carousel-nav-part">
+        <div class="payment-agree">
+          <label class="input-container-check">
+            <input
+              type="checkbox"
+              value="agree"
+              class="input-check detect-agree-input"
+              data-target="#start-payment"
+              id="payment-check" />
+            <span class="input-check-icon">
+                <svg class="icon"><use xlink:href="images/sprite.svg#selected"></use></svg>
+              </span>
+            <span class="input-check-title">Samþykkja <a href="#">skilmála</a></span>
+          </label>
+          <a href="#" class="btn btn-md disabled" id="start-payment">GreiÐa</a>
+        </div>
         <button class="btn btn-md" data-carousel="#create-carousel" data-slide="next">Áfram</button>
       </div>
     </div>

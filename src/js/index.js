@@ -58,13 +58,13 @@ const openPopup = (btn, box) => {
 /*
 Close popups on click outside
  */
-// $(document).mouseup(function (e) {
-//     const container = $('.popup');
-//     if (!container.is(e.target) && container.has(e.target).length === 0) {
-//         $('.popup-btn').removeClass('is-active');
-//         $('.popup-box').removeClass('to-right').hide();
-//     }
-// });
+$(document).mouseup(function (e) {
+    const container = $('.popup');
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+        $('.popup-btn').removeClass('is-active');
+        $('.popup-box').removeClass('to-right').hide();
+    }
+});
 
 /*
 User data carousel
@@ -81,13 +81,22 @@ $('#user-carousel').slick({
     swipe: false
 });
 
+const carouselNav = $('.carousel-nav');
 $('#create-carousel').slick({
     infinite: false,
     arrows: false,
     dots: true,
     fade: true,
     speed: 400,
-    cssEase: 'ease-out'
+    cssEase: 'ease-out',
+    swipe: false,
+    draggable: false,
+    touchMove: false,
+    accessibility: false
+}).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    ( nextSlide + 1 ) === slick.slideCount ? carouselNav.addClass('last-step') : carouselNav.removeClass('last-step');
+}).on('afterChange', function (event, slick, currentSlide) {
+    currentSlide === 0 ? carouselNav.addClass('first-step') : carouselNav.removeClass('first-step');
 });
 
 /*
@@ -107,4 +116,13 @@ $('[data-carousel]').on('click', function (event) {
         default:
             $(carousel).slick('slickGoTo', toSlide);
     }
+});
+
+/*
+Detect agree toggle
+ */
+$('.detect-agree-input').on('change', function () {
+    const checked = $(this).prop('checked');
+    const elTarget = $(this).attr('data-target');
+    checked ? $(elTarget).removeClass('disabled') : $(elTarget).addClass('disabled');
 });

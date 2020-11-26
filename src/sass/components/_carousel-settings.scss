@@ -58,7 +58,24 @@
       border-top: 1px var(--color-gray-200) solid;
       padding: 30px 0;
         &-part{
-
+          display: flex;
+          align-items: center;
+        }
+        &.first-step{
+            .carousel-nav-back{
+              pointer-events: none;
+              opacity: .5;
+            }
+        }
+        &.last-step{
+          .carousel-nav-part{
+            & > .btn{
+              display: none;
+            }
+            .payment-agree{
+              display: inline-flex;
+            }
+          }
         }
         .btn{
           max-width: 144px;
