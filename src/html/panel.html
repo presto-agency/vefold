@@ -1,8 +1,29 @@
 //= components/_head.html
 //= components/_header.html
 <section class="section panel">
-  <div class="container">
-    <h1>Panel</h1>
+  <div class="tabs">
+    <div class="container">
+      <div class="tabs-nav">
+        <div class="tabs-nav-list">
+          <button class="tab">Þínir Vefir</button>
+        </div>
+        <div class="tabs-nav-action">
+          <div class="switch-display">
+            <div class="switch-display-btn __list active" data-display="list">
+              <svg class="icon"><use xlink:href="images/sprite.svg#list"></use></svg>
+            </div>
+            <div class="switch-display-btn __block" data-display="block">
+              <svg class="icon"><use xlink:href="images/sprite.svg#block"></use></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-box">
+    <div class="switch-display-box" data-display-option="list">
+
+    </div>
   </div>
 </section>
 //= components/_footer.html

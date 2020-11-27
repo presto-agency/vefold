@@ -136,3 +136,15 @@ $('.detect-agree-input').on('change', function () {
     const elTarget = $(this).attr('data-target');
     checked ? $(elTarget).removeClass('disabled') : $(elTarget).addClass('disabled');
 });
+
+/*
+Switch display options
+ */
+$(document).on('click', '.switch-display-btn', function () {
+    const btn = $(this);
+    const box = $('.switch-display-box');
+    const displayOption = btn.attr('data-display');
+    $('.switch-display-btn').not(btn).removeClass('active');
+    box.attr('data-display-option', displayOption);
+    btn.hasClass('active') ? btn.removeClass('active') : btn.addClass('active');
+});
