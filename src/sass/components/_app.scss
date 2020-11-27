@@ -63,6 +63,11 @@ h5{
       @extend .medium;
       font-size: 25px;
       letter-spacing: -.02em;
+        @include d(767){
+          font-size: inherit;
+          letter-spacing: inherit;
+          margin-right: 4px;
+        }
     }
     @include d(767){
       font-size: 20px;
@@ -370,12 +375,32 @@ a.btn{
         display: none;
       }
     }
+    &-xs{
+      @include d(575){
+        display: none;
+      }
+    }
+    &-xxs{
+      @include d(480){
+        display: none;
+      }
+    }
 }
 
 .display{
   display: block;
     &-sm{
       @include d(767){
+        display: block;
+      }
+    }
+    &-xs{
+      @include d(575){
+        display: block;
+      }
+    }
+    &-xxs{
+      @include d(480){
         display: block;
       }
     }

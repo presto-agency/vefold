@@ -7,14 +7,23 @@
         @include d(767){
           flex: none;
           display: inline-block;
-          width: 233px;
+          width: 250px;
+            &:last-child{
+              padding-right: 16px;
+            }
+            &:first-child{
+              padding-left: 16px;
+            }
+        }
+        @include d(480){
+          padding: 22px 8px 10px;
         }
     }
     @include d(767){
-      display: block;
       white-space: nowrap;
       overflow-x: auto;
-      margin: 0 -16px 0 -8px;
+      margin: 0 -16px;
+      padding-bottom: 10px;
     }
 }
 
@@ -29,6 +38,9 @@
     &-title{
       margin-bottom: 20px;
       display: block;
+        @include d(480){
+          margin-bottom: 8px;
+        }
     }
     &-description{
       margin-bottom: 18px;
@@ -116,5 +128,9 @@
     }
     @include d(767){
       white-space: normal;
+    }
+    @include d(480){
+      padding: 30px 10px 20px;
+      min-height: 300px;
     }
 }

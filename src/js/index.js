@@ -92,9 +92,19 @@ $('#create-carousel').slick({
     swipe: false,
     draggable: false,
     touchMove: false,
-    accessibility: false
+    accessibility: false,
+    adaptiveHeight: true,
+    responsive: [
+        {
+            breakpoint: 481,
+            settings: {
+                dots: false
+            }
+        }
+    ]
 }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
     ( nextSlide + 1 ) === slick.slideCount ? carouselNav.addClass('last-step') : carouselNav.removeClass('last-step');
+    $('html, body').animate({scrollTop: 0}, 400);
 }).on('afterChange', function (event, slick, currentSlide) {
     currentSlide === 0 ? carouselNav.addClass('first-step') : carouselNav.removeClass('first-step');
 });

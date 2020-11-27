@@ -21,6 +21,12 @@
         }
         .slick-dots{
           margin-top: 54px;
+            @include d(767){
+              margin-top: 20px;
+            }
+        }
+        @include d(767){
+          margin: 0 -16px;
         }
     }
     &-box{
@@ -30,16 +36,45 @@
         &-title{
           max-width: 550px;
           margin-bottom: 38px;
+            .title-2{
+                @include d(575){
+                  font-size: 28px;
+                }
+                @include d(480){
+                  font-size: 24px;
+                  letter-spacing: -.01em;
+                }
+            }
+            @include d(767){
+              padding: 0 16px;
+              max-width: 80%;
+            }
+            @include d(575){
+              max-width: 100%;
+            }
+            @include d(480){
+              max-width: 95%;
+              margin-bottom: 12px;
+            }
         }
         &-content{
           overflow: hidden;
+            @include d(767){
+              padding: 0 16px;
+            }
         }
         .input-container{
             &-label{
               top: -22px;
+                @include d(480){
+                  top: -20px;
+                }
             }
             &.__label{
               margin-top: 42px;
+                @include d(480){
+                  margin-top: 34px;
+                }
             }
         }
     }
@@ -52,5 +87,21 @@
               }
             }
         }
+        @include d(480){
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          padding: 16px;
+          z-index: 1;
+          background-color: var(--color-gray-100);
+        }
+    }
+    @include d(575){
+      padding: 40px 0;
+    }
+    @include d(480){
+      padding: 34px 0 0;
+      min-height: calc(100vh - 44px);
     }
 }

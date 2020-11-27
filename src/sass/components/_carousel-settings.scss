@@ -80,6 +80,10 @@
         .btn{
           max-width: 144px;
           width: 100vw;
+            @include d(480){
+              height: 32px;
+              max-width: 132px;
+            }
         }
     }
 }

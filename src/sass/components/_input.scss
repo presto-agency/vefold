@@ -57,7 +57,7 @@
                 }
             }
             @include d(480){
-              &:not(.__done){
+              &:not(.attention){
                 display: none;
               }
             }
@@ -112,6 +112,9 @@
                 &:first-child{
                   margin-left: 0;
                 }
+                @include d(480){
+                  margin-bottom: 0;
+                }
             }
         }
         .icon-down{
@@ -159,6 +162,9 @@
               &-container{
                   &-label{
                     font-size: 12px;
+                      @include d(480){
+                        font-size: 10px;
+                      }
                   }
                   &-btn{
                     width: 24px;
@@ -171,6 +177,12 @@
                         margin-top: -11px;
                         margin-left: -11px;
                       }
+                      @include d(480){
+                        right: 8px;
+                        width: 16px;
+                        height: 16px;
+                        margin-top: -8px;
+                      }
                   }
                   &-message{
                     right: 40px;
@@ -181,13 +193,20 @@
                           &.__check{
                             padding: 0;
                           }
+                          @include d(480){
+                            right: 8px;
+                          }
                       }
                   }
+              }
+              @include d(480){
+                height: 40px;
+                padding: 0 8px;
               }
           }
           &.error{
             .input{
-              padding-right: 230px;
+              padding-right: 40px;
             }
           }
         }

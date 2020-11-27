@@ -8,6 +8,15 @@
         .title-14{
           @extend .medium;
           margin-bottom: 24px;
+            @include d(480){
+              margin-bottom: 20px;
+            }
+        }
+        @include d(575){
+          padding: 0;
+        }
+        @include d(480){
+          margin-bottom: 20px;
         }
     }
     &-title{
@@ -18,10 +27,31 @@
           flex: 1;
             &:nth-child(2){
               max-width: 230px;
+                @include d(575){
+                  max-width: 100%;
+                }
             }
         }
         .title-2{
           margin-bottom: 10px;
+            @include d(575){
+              font-size: 28px;
+            }
+            @include d(480){
+              font-size: 24px;
+              margin-bottom: 12px;
+              letter-spacing: -.01em;
+            }
+        }
+        @include d(767) {
+          padding: 0 16px;
+        }
+        @include d(575){
+          margin-bottom: 40px;
+          flex-direction: column;
+        }
+        @include d(480){
+          margin-bottom: 2px;
         }
     }
     &-type{
@@ -30,6 +60,18 @@
         &-box{
           flex: 1;
           padding: 20px 10px 0;
+            @include d(767){
+              flex: none;
+              width: 50%;
+            }
+            @include d(575){
+              padding: 20px 0 0;
+              width: 100%;
+            }
+        }
+        @include d(575){
+          flex-direction: column;
+          margin: 0;
         }
     }
     &-list{
@@ -42,7 +84,24 @@
           max-width: 50px;
             &:not(:first-child){
               margin-left: 21px;
+                @include d(480){
+                  margin-left: 11px;
+                }
             }
+            @include d(480){
+              max-height: 20px;
+              max-width: 34px;
+              margin-bottom: 0;
+            }
+        }
+        @include d(575){
+          justify-content: flex-start;
+          padding: 20px 0 0;
+          margin-bottom: -20px;
+        }
+        @include d(480){
+          justify-content: flex-end;
+          padding: 28px 0 0;
         }
     }
     &-agree{
@@ -59,8 +118,39 @@
           margin-bottom: 20px;
             &-row{
               margin-bottom: 20px;
+                @include d(480){
+                  margin-bottom: 16px;
+                }
+            }
+            @include d(480){
+              margin-bottom: 16px;
             }
         }
+        &-check{
+            &-title{
+              @include d(480){
+                font-size: 12px;
+              }
+            }
+            @include d(480){
+              margin-top: 4px;
+            }
+        }
+        @include d(480){
+          padding: 0 8px;
+        }
+    }
+    .title{
+        &-12{
+          @include d(480){
+            font-size: 10px;
+            color: var(--color-gray-400);
+          }
+        }
+    }
+    @include d(575){
+      margin: 0;
+      flex-direction: column;
     }
 }
 
@@ -95,6 +185,12 @@
       border-bottom: 1px var(--color-gray-200) solid;
       padding-bottom: 18px;
       max-width: 250px;
+        @include d(575){
+          max-width: 100%;
+        }
+        @include d(480){
+          padding-bottom: 6px;
+        }
     }
     &-price{
       display: block;
@@ -104,9 +200,15 @@
         &-value{
           @extend .package-price-value;
           margin-right: -5px;
+            @include d(480){
+              font-size: 40px;
+            }
         }
         &-label{
           @extend .package-price-label;
+        }
+        @include d(480){
+          padding-left: 85px;
         }
     }
     &-detail{
@@ -115,5 +217,21 @@
       text-align: right;
       display: block;
       padding-top: 3px;
+        @include d(480){
+          text-align: left;
+          padding-top: 0;
+          margin-top: -18px;
+        }
+    }
+    @include d(767){
+      min-height: 280px;
+      padding: 55px 30px;
+    }
+    @include d(575){
+      min-height: 136px;
+      padding: 32px 16px;
+    }
+    @include d(480){
+      padding: 20px 8px;
     }
 }
