@@ -1,25 +1,45 @@
 .tabs{
   background-color: var(--color-gray-100);
-  padding-top: 40px;
+  padding-top: 32px;
   border-bottom: 1px var(--color-gray-200) solid;
     &-nav{
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
         &-list{
-          padding-top: 3px;
+          padding-top: 12px;
+          display: flex;
+          align-items: flex-end;
         }
+        &-action{
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+            .btn{
+              height: 32px;
+              line-height: 32px;
+            }
+            .link{
+              margin-left: 14px;
+            }
+        }
+    }
+    @include d(575){
+      padding-top: 5spx;
     }
 }
 
 .tab{
   letter-spacing: .06em;
   border: none;
-  padding: 0 3px 21px;
+  padding: 0 19px 21px;
   background-color: transparent;
   text-transform: uppercase;
   font-size: 12px;
   @extend .bold;
   position: relative;
+  color: var(--color-gray-400);
+  transition: color .2s ease;
     &:before{
       content: '';
       position: absolute;
@@ -28,5 +48,25 @@
       width: 100%;
       height: 3px;
       background-color: var(--color-warning-100);
+      transition: opacity .2s ease;
+      opacity: 0;
+    }
+    &.active{
+      color: var(--color-gray-500);
+        &:before{
+          opacity: 1;
+        }
+    }
+    @include hover(991){
+      &:hover{
+        color: var(--color-gray-500);
+          &:before{
+            opacity: 1;
+          }
+      }
+    }
+    @include d(575){
+      font-size: 8px;
+      padding: 0 0 13px;
     }
 }

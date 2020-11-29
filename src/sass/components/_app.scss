@@ -145,7 +145,7 @@ p{
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: .06em;
-  transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out, color .2s ease;
   white-space: nowrap;
     &-icon{
       width: 17px;
@@ -193,11 +193,27 @@ p{
     &-border{
       background-color: transparent;
       border-width: 2px;
+      border-color: var(--color-theme);
+      color: var(--color-theme);
+        @include hover(991){
+          &:hover{
+            background-color: var(--color-theme);
+            color: var(--color-white);
+          }
+        }
     }
 }
 
 a.btn{
   color: var(--color-white);
+}
+a.btn-border{
+  color: var(--color-theme);
+    @include hover(991){
+      &:hover{
+        color: var(--color-white);
+      }
+    }
 }
 
 .link{
@@ -248,6 +264,22 @@ a.btn{
       display: inline-flex;
       align-items: center;
       justify-content: center;
+        &-sm{
+          width: 32px;
+          height: 32px;
+            .icon{
+              width: 24px;
+              height: 24px;
+              transition: fill .2s ease;
+            }
+            @include hover(991){
+              &:hover{
+                .icon{
+                  fill: var(--color-gray-300);
+                }
+              }
+            }
+        }
         .icon{
           width: 24px;
           height: 24px;
@@ -270,6 +302,35 @@ a.btn{
                 &-active{
                   opacity: 1;
                 }
+            }
+        }
+        &.__status{
+            .icon{
+              width: 13px;
+              height: 13px;
+            }
+            &.__success{
+              .icon{
+                fill: var(--color-success);
+              }
+            }
+            &.__wrong{
+              .icon{
+                fill: var(--color-danger);
+              }
+            }
+        }
+        &.__collapse{
+            .icon{
+              width: 16px;
+              height: 16px;
+              fill: var(--color-gray-400);
+              transition: transform .2s ease;
+            }
+            &.active{
+              .icon{
+                transform: scaleY(-1);
+              }
             }
         }
         @include hover(991){
@@ -426,6 +487,7 @@ a.btn{
 .switch{
     &-display{
       display: flex;
+      margin-top: 9px;
         &-btn{
           width: 22px;
           height: 22px;
@@ -454,6 +516,9 @@ a.btn{
         }
         &-box{
 
+        }
+        @include d(767){
+          display: none;
         }
     }
 }

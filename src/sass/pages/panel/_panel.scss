@@ -1,5 +1,123 @@
 .panel{
     &-box{
-      padding: 42px 0;
+      padding: 42px 0 80px;
+        @include d(575){
+          padding: 15px 0 40px;
+        }
     }
+}
+
+[data-display-option="block"]{
+  .sites{
+    display: flex;
+    margin: 0 -8px;
+    flex-wrap: wrap;
+      &-box{
+        width: calc(25% - 16px);
+        margin: 0 8px;
+          @include d(1200){
+            width: calc(33.33% - 16px);
+            margin: 0 8px 16px;
+          }
+          @include d(767){
+            width: calc(50% - 16px);
+          }
+          @include d(480){
+            width: 100%;
+          }
+      }
+      @include d(480){
+        margin: 0;
+      }
+  }
+  .site{
+    &-thumb{
+      width: 100%;
+      height: 168px;
+      display: block;
+    }
+    &-content{
+      flex-direction: column;
+      align-items: stretch;
+      padding: 16px 16px 0;
+        &-box{
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+        }
+        &-action{
+          justify-content: space-between;
+          position: relative;
+          padding-top: 2px;
+          top: initial;
+          right: initial;
+            &:before{
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 16px;
+              right: 16px;
+              height: 1px;
+              background-color: var(--color-gray-200);
+            }
+            .link{
+              &-icon{
+                width: 45px;
+                height: 45px;
+                border-left: none;
+              }
+            }
+        }
+    }
+    &-description{
+      padding: 23px 0 20px;
+      width: 100%;
+    }
+    &-detail{
+      padding: 26px 16px 16px;
+        &-box{
+          flex-direction: column;
+          align-items: stretch;
+        }
+        &-info{
+          flex-direction: column;
+          width: 100%;
+          align-items: flex-start;
+          margin-bottom: 0;
+        }
+        &-action{
+          flex-direction: column;
+          align-items: flex-start;
+          border-top: 1px var(--color-gray-200) solid;
+          padding-top: 7px;
+          margin-top: 20px;
+            .link{
+              padding: 0;
+              margin: 10px 0;
+                &:before{
+                  display: none;
+                }
+            }
+            .btn{
+              margin-left: 0;
+              margin-top: 16px;
+              width: 100%;
+            }
+        }
+    }
+    &-ip{
+      margin-left: 0;
+    }
+    &-server{
+      margin-bottom: 25px;
+        span, a{
+          display: block;
+          margin-left: 0;
+          margin-top: 7px;
+        }
+    }
+    &-new{
+      min-height: 328px;
+    }
+  }
 }

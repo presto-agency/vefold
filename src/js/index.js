@@ -148,3 +148,13 @@ $(document).on('click', '.switch-display-btn', function () {
     box.attr('data-display-option', displayOption);
     btn.hasClass('active') ? btn.removeClass('active') : btn.addClass('active');
 });
+
+/*
+Collapse site info
+ */
+$('.link-icon.__collapse').on('click', function () {
+   const btn = $(this);
+   const targetBox = btn.closest('.site').find('.site-detail');
+   btn.toggleClass('active');
+   targetBox.slideToggle(200);
+});
