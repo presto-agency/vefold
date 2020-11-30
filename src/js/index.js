@@ -158,3 +158,20 @@ $('.link-icon.__collapse').on('click', function () {
    btn.toggleClass('active');
    targetBox.slideToggle(200);
 });
+
+/*
+Tabs switch theme
+ */
+$(document).on('click', '.tab', function () {
+    const tabBtn = $(this);
+    const tabBtnId = tabBtn.attr('data-tab-id');
+    const tabContent = $('.tab-content[data-tab-content-id="'+ tabBtnId +'"]');
+    $('.tab').not(tabBtn).removeClass('active');
+    $('.tab-content').not(tabContent).hide();
+    if(tabBtn.hasClass('active')) {
+        tabBtn.removeClass('active');
+    } else {
+        tabBtn.addClass('active');
+        tabContent.fadeIn(200);
+    }
+});

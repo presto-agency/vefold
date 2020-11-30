@@ -10,6 +10,9 @@
           padding-top: 12px;
           display: flex;
           align-items: flex-end;
+            @include d(991){
+              padding-top: 8px;
+            }
         }
         &-action{
           display: flex;
@@ -21,11 +24,17 @@
             }
             .link{
               margin-left: 14px;
+                .icon{
+                  fill: var(--color-gray-400);
+                }
+            }
+            @include d(767){
+              display: none;
             }
         }
     }
     @include d(575){
-      padding-top: 5spx;
+      padding-top: 5px;
     }
 }
 
@@ -51,6 +60,11 @@
       transition: opacity .2s ease;
       opacity: 0;
     }
+    &-content{
+        &:not(:first-child){
+          display: none;
+        }
+    }
     &.active{
       color: var(--color-gray-500);
         &:before{
@@ -65,8 +79,11 @@
           }
       }
     }
+    @include d(767){
+      padding: 0 15px 21px;
+    }
     @include d(575){
       font-size: 8px;
-      padding: 0 0 13px;
+      padding: 0 6px 13px;
     }
 }

@@ -1,8 +1,32 @@
 .panel{
     &-box{
       padding: 42px 0 80px;
+        .table{
+          margin-bottom: 20px;
+            .btn{
+              max-width: 200px;
+              width: 100%;
+                &-md{
+                  font-size: 12px;
+                }
+                @include d(767){
+                  max-width: 140px;
+                }
+                @include d(575){
+                  height: 28px;
+                  line-height: 28px;
+                  font-size: 10px;
+                  max-width: 94px;
+                  padding: 0 10px;
+                }
+            }
+            @include d(575){
+              margin-bottom: 16px;
+            }
+        }
         @include d(575){
           padding: 15px 0 40px;
+          min-height: calc(100vh - 325px);
         }
     }
 }
