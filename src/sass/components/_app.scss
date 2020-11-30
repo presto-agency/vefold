@@ -282,6 +282,7 @@ a.btn-border{
             .icon{
               width: 24px;
               height: 24px;
+              margin-right: 0;
               transition: fill .2s ease;
             }
             @include hover(991){
@@ -292,6 +293,10 @@ a.btn-border{
               }
             }
             @include d(767){
+              width: 32px;
+              height: 32px;
+            }
+            @include d(480){
               width: 32px;
               height: 32px;
             }
@@ -429,6 +434,9 @@ a.btn-border{
       @extend .medium;
       color: var(--color-gray-500);
       letter-spacing: .04em;
+    }
+    &-14{
+      font-size: 14px;
     }
     &-16{
       font-size: 16px;
@@ -607,5 +615,20 @@ a.btn-border{
     .icon{
       width: 16px;
       height: 16px;
+    }
+}
+
+.order{
+    &-sm{
+        &-1{
+          @include m(768){
+            order: 1;
+          }
+        }
+        &-2{
+          @include m(768){
+            order: 2;
+          }
+        }
     }
 }

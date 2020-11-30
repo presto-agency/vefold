@@ -6,6 +6,11 @@
     &-head{
       background-color: var(--color-gray-100);
       padding: 14px 16px;
+        &.active{
+            .table-row-toggle{
+              transform: scaleY(-1);
+            }
+        }
         @include d(575){
           padding: 12px 8px;
         }
@@ -18,8 +23,29 @@
     }
     &-row{
       display: flex;
+      position: relative;
         &:not(:last-child){
           border-bottom: 1px var(--color-gray-200) solid;
+        }
+        &-toggle{
+          position: absolute;
+          top: -7px;
+          right: -16px;
+          display: none;
+          transition: transform .2s ease;
+            &.link-icon{
+              .icon{
+                width: 12px;
+                height: 12px;
+              }
+            }
+            @include d(767){
+              display: inline-flex;
+            }
+            @include d(575){
+              top: -11px;
+              right: -11px;
+            }
         }
     }
     &-th{
@@ -30,6 +56,9 @@
       text-transform: uppercase;
       @extend .medium;
       position: relative;
+        &:not(:first-child):last-child{
+          text-align: right;
+        }
         p, span{
           letter-spacing: inherit;
           font-family: inherit;
@@ -72,6 +101,60 @@
                 }
             }
         }
+    }
+    &-minimize{
+      .table{
+          &-td{
+            padding: 20px 0;
+          }
+      }
+    }
+    &-nav{
+      text-align: center;
+      color: var(--color-theme);
+      padding: 20px 0;
+      position: relative;
+        &-link{
+          margin: 0 8px;
+            &.active{
+              @extend .bold;
+            }
+        }
+        &-arrow{
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+            .icon{
+              width: 16px;
+              height: 16px;
+            }
+            &.__prev{
+              left: 10px;
+            }
+            &.__next{
+              right: 10px;
+              transform: translateY(-50%) scaleX(-1);
+            }
+        }
+        @include d(575){
+          font-size: 12px;
+            .link{
+              font-size: inherit;
+            }
+        }
+    }
+    &-collapse{
+      .table{
+        &-body,
+        &-nav{
+          @include d(767){
+            display: none;
+          }
+        }
+      }
     }
     .information{
       margin-top: 30px;
@@ -122,8 +205,25 @@
             }
         }
     }
+    .link{
+      @include d(575){
+        font-size: 12px;
+          .icon{
+            width: 14px;
+            height: 14px;
+          }
+      }
+    }
+    @include d(757){
+      .title-14{
+        font-size: 12px;
+      }
+    }
     @include d(575){
       font-size: 10px;
+        .title-14{
+          font-size: inherit;
+        }
     }
 }
 

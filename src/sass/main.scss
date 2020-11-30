@@ -11,6 +11,7 @@ Global settings
 Libs
  */
 @import "../libs/slick.css";
+@import "../libs/magnific-popup.css";
 
 /*
 Pages
@@ -27,6 +28,7 @@ Pages
 @import "pages/panel/panel";
 @import "pages/panel/access";
 @import "pages/panel/backup";
+@import "pages/panel/orders";
 
 /*
 Components
@@ -41,3 +43,4 @@ Components
 @import "components/carousel-settings";
 @import "components/table";
 @import "components/tooltip";
+@import "components/modal";

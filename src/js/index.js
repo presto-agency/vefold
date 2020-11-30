@@ -42,14 +42,17 @@ const detectPopupPosition = (popup) => {
 
 const closePopup = (btn, box) => {
     btn.removeClass('is-active');
+    $('.popup').removeClass('is-active');
     $('#user-carousel').slick('slickGoTo', 0);
     box.removeClass('to-right').hide();
 };
 
 const openPopup = (btn, box) => {
+    $('.popup').not(btn.closest('.popup')).removeClass('is-active');
     $('.popup-btn').not(btn).removeClass('is-active');
     $('.popup-box').not(box).removeClass('to-right').hide();
     btn.addClass('is-active');
+    btn.closest('.popup').addClass('is-active');
     box.fadeIn(200);
     $('#user-carousel').slick('setPosition');
     detectPopupPosition(box);
@@ -61,7 +64,7 @@ Close popups on click outside
 $(document).mouseup(function (e) {
     const container = $('.popup');
     if (!container.is(e.target) && container.has(e.target).length === 0) {
-        $('.popup-btn').removeClass('is-active');
+        $('.popup-btn, .popup').removeClass('is-active');
         $('.popup-box').removeClass('to-right').hide();
     }
 });
@@ -108,6 +111,22 @@ $('#create-carousel').slick({
 }).on('afterChange', function (event, slick, currentSlide) {
     currentSlide === 0 ? carouselNav.addClass('first-step') : carouselNav.removeClass('first-step');
 });
+
+/*
+Edit order carousel
+ */
+$('#edit-order-carousel').slick({
+    infinite: false,
+    arrows: false,
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 400,
+    cssEase: 'ease-out',
+    adaptiveHeight: true,
+    swipe: false,
+});
+
 
 /*
 Move carousel on click
@@ -223,5 +242,35 @@ $('.toggle-visible-pass').on('click', function () {
         inputPass.attr('type', 'text');
     } else {
         inputPass.attr('type', 'password');
+    }
+});
+
+/*
+Hide credit card numbers
+ */
+$('.orders-card-number').each(function () {
+    let mask = $(this).text().replace(/\d{4}(?= \d{4})/g, "****");
+    $(this).html(mask);
+});
+
+/*
+Collapse table on click
+ */
+$('.table-collapse .table-head').on('click', function () {
+    const tHead = $(this);
+    const tBody = tHead.closest('.table').find('.table-body, .table-nav');
+    tHead.toggleClass('active');
+    tBody.slideToggle(200);
+});
+
+/*
+Open modals
+ */
+$('.open-modal').magnificPopup({
+    type: 'inline',
+    callbacks: {
+        open: function() {
+            $('#edit-order-carousel').slick('setPosition');
+        },
     }
 });

@@ -320,6 +320,114 @@
     </div>
   </div>
 </footer>
+
+<div class="modal" id="edit-order">
+  <div class="modal-box">
+    <div class="orders-carousel" id="edit-order-carousel">
+      <div class="orders-carousel-slide">
+        <div class="modal-box-head">
+          <p class="title-10 ttu bold modal-label">Breyta korti</p>
+          <h5 class="title-5 modal-title">Greiðandi</h5>
+        </div>
+        <div class="modal-box-body">
+          <div class="input-container">
+            <input type="text" class="input" placeholder="Fullt nafn eða fyrirtæki">
+            <div class="input-container-btn">
+              <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+            </div>
+          </div>
+          <div class="input-container">
+            <input type="text" class="input" placeholder="Kennitala">
+            <div class="input-container-btn">
+              <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+            </div>
+          </div>
+          <div class="input-container">
+            <input type="text" class="input" placeholder="Heimilisfang">
+            <div class="input-container-btn">
+              <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+            </div>
+          </div>
+          <div class="input-container">
+            <svg class="icon icon-down"><use xlink:href="images/sprite.svg#collapse-arrow"></use></svg>
+            <select name="municipality" class="select" required>
+              <option value="" disabled="disabled" selected="selected">Veldu bæjarfélag</option>
+              <option value="Bæjarfélag 1">Bæjarfélag 1</option>
+              <option value="Bæjarfélag 2">Bæjarfélag 2</option>
+              <option value="Bæjarfélag 3">Bæjarfélag 3</option>
+              <option value="Bæjarfélag 4">Bæjarfélag 4</option>
+              <option value="Bæjarfélag 5">Bæjarfélag 5</option>
+              <option value="Bæjarfélag 6">Bæjarfélag 6</option>
+            </select>
+          </div>
+          <div class="modal-box-nav">
+            <button class="btn btn-md" data-carousel="#edit-order-carousel" data-slide="next">Áfram</button>
+          </div>
+        </div>
+      </div>
+      <div class="orders-carousel-slide">
+        <div class="modal-box-head">
+          <p class="title-10 ttu bold modal-label">Breyta korti</p>
+          <h5 class="title-5 modal-title">Kortaupplýsinga</h5>
+        </div>
+        <div class="modal-box-body">
+          <div class="input-container">
+            <input type="text" class="input" placeholder="Fullt nafn eins og það er á korti">
+            <div class="input-container-btn">
+              <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+            </div>
+          </div>
+          <div class="input-container">
+            <input type="text" class="input" placeholder="Kortanúmer án bila eða bandstrika">
+            <div class="input-container-btn">
+              <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+            </div>
+          </div>
+          <div class="input-container-row">
+            <div class="input-container">
+              <svg class="icon icon-down"><use xlink:href="images/sprite.svg#collapse-arrow"></use></svg>
+              <select name="municipality" class="select">
+                <option value="Mánudagur" selected="selected">Mán.</option>
+                <option value="Þriðjudagur">Þri.</option>
+                <option value="Miðvikudagur">Mið.</option>
+                <option value="Fimmtudagur">Fim.</option>
+                <option value="Föstudagur">Fös.</option>
+                <option value="Laugardagur">Lau.</option>
+                <option value="Sunnudagur">Sun.</option>
+              </select>
+            </div>
+            <div class="input-container">
+              <svg class="icon icon-down"><use xlink:href="images/sprite.svg#collapse-arrow"></use></svg>
+              <select name="municipality" class="select" required>
+                <option value="" disabled="disabled" selected="selected">Ár</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+              </select>
+            </div>
+          </div>
+          <div class="input-container">
+            <input type="text" class="input" placeholder="CVC númer">
+            <div class="input-container-btn">
+              <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+            </div>
+          </div>
+          <div class="modal-box-nav">
+            <button class="link link-ttu carousel-nav-back" data-carousel="#edit-order-carousel" data-slide="prev">
+              <svg class="icon"><use xlink:href="images/sprite.svg#back"></use></svg>
+              til baka
+            </button>
+            <button class="btn btn-md">Áfram</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </main>
 
 <script src="js/scripts.min.js"></script>
