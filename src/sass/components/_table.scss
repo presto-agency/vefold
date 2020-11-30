@@ -56,6 +56,9 @@
     .title{
         &-16{
           margin-bottom: 9px;
+            &.access-title{
+              margin-bottom: 0;
+            }
             @include d(575){
               font-size: 12px;
             }
@@ -85,8 +88,46 @@
               }
           }
         }
+        &-server{
+            &:nth-child(1){
+                span, a{
+                  margin-left: 0;
+                }
+            }
+        }
     }
     @include d(575){
       font-size: 10px;
+    }
+}
+
+.full-border{
+  position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      height: 1px;
+      right: -16px;
+      left: -16px;
+      background-color: var(--color-gray-200);
+    }
+    &-bottom{
+        &:not(:last-child){
+          border-bottom: none;
+        }
+        &:before{
+          bottom: 0;
+        }
+    }
+}
+
+.column{
+    &-sm{
+      @include d(767){
+        flex-direction: column;
+          .table-td{
+            padding: 20px 0;
+          }
+      }
     }
 }

@@ -175,3 +175,53 @@ $(document).on('click', '.tab', function () {
         tabContent.fadeIn(200);
     }
 });
+
+/*
+Set input auto width
+ */
+$('.access-value').each(function () {
+    let widthPoint = 10;
+    $(window).width() < 575 ? widthPoint = 8 : null;
+    $(this).css('width', ( ( $(this).val().length + 1 ) * widthPoint ));
+});
+
+/*
+Copy to clipboard
+ */
+const copyingSuccess = (tooltip, successText, defaultText) => {
+    tooltip.text(successText);
+    setTimeout(function () {
+        tooltip.text(defaultText);
+    }, 3000);
+};
+
+$('.copy-btn').on('click', function (event) {
+    event.preventDefault();
+    const text = $(this).closest('.access-data-item').find('.copy-text').val();
+    const tooltipMessage = $(this).find('.tooltip-box p');
+    const defaultText = $(this).attr('data-default-title');
+    const successText = $(this).attr('data-success-title');
+    if (navigator.clipboard !== undefined) {
+        navigator.clipboard.writeText(text)
+            .then(function () {
+                copyingSuccess(tooltipMessage, successText, defaultText);
+            }, function (error) {
+                console.log('error - ', error);
+            });
+    } else if(window.clipboardData) {
+        window.clipboardData.setData('Text', text);
+        copyingSuccess(tooltipMessage, successText, defaultText);
+    }
+});
+
+/*
+Toggle password visible
+ */
+$('.toggle-visible-pass').on('click', function () {
+    const inputPass = $(this).closest('.access-data-item').find('input');
+    if(inputPass.attr('type') === 'password') {
+        inputPass.attr('type', 'text');
+    } else {
+        inputPass.attr('type', 'password');
+    }
+});

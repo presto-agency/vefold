@@ -1,6 +1,7 @@
 .panel{
     &-box{
       padding: 42px 0 80px;
+      min-height: calc(100vh - 286px);
         .table{
           margin-bottom: 20px;
             .btn{

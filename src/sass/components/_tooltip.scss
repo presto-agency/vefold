@@ -1,0 +1,48 @@
+.tooltip{
+  position: relative;
+    &-box{
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: -15px;
+      padding: 10px 13px;
+      border-radius: 6px;
+      background-color: var(--color-gray-500);
+      color: var(--color-white);
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s ease;
+        &:before{
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 15px;
+          width: 16px;
+          height: 16px;
+          border-radius: 2px;
+          transform: rotate(45deg);
+          background-color: inherit;
+          pointer-events: none;
+        }
+        p{
+          position: relative;
+        }
+        @include d(1300){
+          left: auto;
+          right: -15px;
+            &:before{
+              left: auto;
+              right: 15px;
+            }
+        }
+    }
+    &:hover{
+      .tooltip-box{
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+}
