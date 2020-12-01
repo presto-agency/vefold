@@ -100,6 +100,11 @@
     }
     &-detail{
       padding: 26px 16px 16px;
+      position: absolute;
+      bottom: 47px;
+      left: 0;
+      height: calc(100% - 47px);
+      width: 100%;
         &-box{
           flex-direction: column;
           align-items: stretch;
@@ -118,7 +123,7 @@
           margin-top: 20px;
             .link{
               padding: 0;
-              margin: 10px 0;
+              margin: 6px 0;
                 &:before{
                   display: none;
                 }
@@ -152,5 +157,19 @@
     &:nth-child(1){
       display: none;
     }
+  }
+  .site{
+      &-detail{
+          &-action{
+            .btn{
+              @include d(575){
+                bottom: 8px;
+                right: 0;
+                font-size: 10px;
+                position: absolute;
+              }
+            }
+          }
+      }
   }
 }
