@@ -15,9 +15,6 @@ $('#sign-in').validate({
       name: 'Rangt netfang eða lykilorð',
       password: 'Rangt netfang eða lykilorð'
     },
-    invalidHandler: function(event, validator) {
-        console.log(event, validator);
-    },
     submitHandler: function(form) {
         form.submit();
     },
