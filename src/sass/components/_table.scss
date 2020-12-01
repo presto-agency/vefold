@@ -47,6 +47,22 @@
               right: -11px;
             }
         }
+        &.column{
+            &-xs{
+              @include d(575){
+                flex-direction: column;
+                  .table-td{
+                    &:not(:last-child){
+                      padding-bottom: 0;
+                    }
+                  }
+                  .btn{
+                    width: 100%;
+                    max-width: 100%;
+                  }
+              }
+            }
+        }
     }
     &-th{
       flex: 1;
@@ -171,6 +187,11 @@
             @include d(575){
               font-size: 12px;
             }
+        }
+    }
+    .settings-link{
+        .title-16{
+          margin-bottom: 0;
         }
     }
     .site{

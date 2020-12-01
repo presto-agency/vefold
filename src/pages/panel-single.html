@@ -36,6 +36,18 @@
 <body>
 
 <main id="wrapper">
+<div class="message">
+  <div class="information">
+    <div class="information-icon">
+      <svg class="icon"><use xlink:href="images/sprite.svg#alert"></use></svg>
+    </div>
+    <p class="information-title">KrediTkort ógilt</p>
+    <p class="information-description"><a href="#">Skoða nánar</a></p>
+    <div class="information-close">
+      <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+    </div>
+  </div>
+</div>
 <header class="header">
   <div class="container">
     <div class="header-panel">
@@ -380,7 +392,8 @@
                     <p class="access-label">Lykilorð:</p>
                     <input type="password" class="access-value copy-text" value="4321567898765432">
                     <button class="access-icon __visible toggle-visible-pass">
-                      <svg class="icon"><use xlink:href="images/sprite.svg#visible"></use></svg>
+                      <svg class="icon __visible"><use xlink:href="images/sprite.svg#visible"></use></svg>
+                      <svg class="icon __invisible"><use xlink:href="images/sprite.svg#invisible"></use></svg>
                     </button>
                     <button class="access-icon __copy tooltip copy-btn" data-success-title="Lykilorð afritað" data-default-title="Afrita lykilorð">
                       <svg class="icon"><use xlink:href="images/sprite.svg#copy"></use></svg>
@@ -422,7 +435,8 @@
                     <p class="access-label">Lykilorð:</p>
                     <input type="password" class="access-value copy-text" value="1234567898765432">
                     <button class="access-icon __visible toggle-visible-pass">
-                      <svg class="icon"><use xlink:href="images/sprite.svg#visible"></use></svg>
+                      <svg class="icon __visible"><use xlink:href="images/sprite.svg#visible"></use></svg>
+                      <svg class="icon __invisible"><use xlink:href="images/sprite.svg#invisible"></use></svg>
                     </button>
                     <button class="access-icon __copy tooltip copy-btn" data-success-title="Lykilorð afritað" data-default-title="Afrita lykilorð">
                       <svg class="icon"><use xlink:href="images/sprite.svg#copy"></use></svg>
@@ -1097,7 +1111,104 @@
         </div>
       </div>
       <div class="tab-content" data-tab-content-id="4">
-        <h3>Tab 5</h3>
+        <div class="table">
+          <div class="table-head">
+            <div class="table-row">
+              <div class="table-th">
+                <p>Vefur</p>
+              </div>
+            </div>
+          </div>
+          <div class="table-body">
+            <div class="table-row column-xs">
+              <div class="table-td">
+                <div class="settings-link">
+                  <p class="title-16">Titill:</p>
+                  <a href="#" target="_blank" class="settings-link-value">Awesomenewstuffforsale.com</a>
+                </div>
+              </div>
+              <div class="table-td">
+                <button class="btn btn-md" data-switcher="sll">Vista</button>
+              </div>
+            </div>
+            <div class="table-row column-xs">
+              <div class="table-td">
+                <div class="settings-link">
+                  <p class="title-16">Slóð:</p>
+                  <a href="#" target="_blank" class="settings-link-value">Awesomenewstuffforsale.com</a>
+                </div>
+              </div>
+              <div class="table-td">
+                <button class="btn btn-md" data-switcher="sll">Vista</button>
+              </div>
+            </div>
+            <div class="table-row">
+              <div class="table-td">
+                <p class="title-16">Eyða vef</p>
+                <p>Segja upp áskrift og eyða vef</p>
+              </div>
+              <div class="table-td">
+                <a href="#delete-market" class="btn btn-md btn-danger open-modal">Eyða</a>
+              </div>
+            </div>
+            <div class="table-row">
+              <div class="table-td">
+                <p class="title-16">Núllstilla vef</p>
+                <p>Eyða öllu af vefsvæði og byrja frá grunni</p>
+              </div>
+              <div class="table-td">
+                <button class="btn btn-md btn-danger">Núllstilla</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table">
+          <div class="table-head">
+            <div class="table-row">
+              <div class="table-th">
+                <p>SLL</p>
+              </div>
+            </div>
+          </div>
+          <div class="table-body">
+            <div class="table-row">
+              <div class="table-td">
+                <p class="title-16">Slökkva á SSL Skírteinum</p>
+              </div>
+              <div class="table-td">
+                <label class="switcher">
+                  <input type="checkbox" class="switcher-input" data-target="sll" checked="checked">
+                  <span class="switcher-bg"></span>
+                  <span class="switcher-title">
+                    <span class="switcher-title-value __default">Slökkt</span>
+                    <span class="switcher-title-value __checked">KVeikt</span>
+                  </span>
+                  <span class="switcher-circle"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table">
+          <div class="table-head">
+            <div class="table-row">
+              <div class="table-th">
+                <p>Flýtiminni</p>
+              </div>
+            </div>
+          </div>
+          <div class="table-body">
+            <div class="table-row">
+              <div class="table-td">
+                <p class="title-16">Hreinsa flýtiminni vefs</p>
+                <p>Ef breytingar á vef skila sér ekki gæti þurft að hreinsa flýtiminnið.</p>
+              </div>
+              <div class="table-td">
+                <button class="btn btn-md">HReinsa</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1242,9 +1353,43 @@
     </div>
   </div>
 </div>
+
+<div class="modal" id="delete-market">
+  <div class="modal-box text-center">
+    <div class="modal-box-head">
+      <h5 class="title-4 modal-title">Viltu eyða Sölutorgið?</h5>
+      <label class="input-container-check">
+        <input type="checkbox" value="agree" class="input-check detect-agree-input" data-target="#delete-marketplace">
+        <span class="input-check-icon">
+          <svg class="icon"><use xlink:href="images/sprite.svg#selected"></use></svg>
+        </span>
+        <span class="input-check-title">Já ég er viss!</span>
+      </label>
+    </div>
+    <div class="modal-box-body">
+      <div class="input-container">
+        <input type="password" class="input" placeholder="Sláðu inn lykilorðið þitt">
+        <div class="input-container-btn">
+          <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+        </div>
+        <button class="access-icon toggle-visible-pass">
+          <svg class="icon __visible"><use xlink:href="images/sprite.svg#visible"></use></svg>
+          <svg class="icon __invisible"><use xlink:href="images/sprite.svg#invisible"></use></svg>
+        </button>
+      </div>
+      <button class="btn btn-md btn-danger disabled" id="delete-marketplace" onclick="openAlert('Vef hefur verið eytt');">EyÐa vefnum</button>
+    </div>
+  </div>
+</div>
+
+<div class="alert">
+  <div class="alert-bg"></div>
+  <div class="alert-box"></div>
+</div>
 </main>
 
 <script src="js/scripts.min.js"></script>
+<script src="js/validation.js"></script>
 
 </body>
 </html>

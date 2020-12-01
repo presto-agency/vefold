@@ -1,16 +1,13 @@
 const btn = document.getElementById('check-rule');
 const check = document.getElementById('check');
 
-if(btn) {
-    btn.addEventListener('click', function (event) {
-        event.preventDefault();
-        if(check.checked) {
-            window.location.href = '/signup-notification.html';
-        } else {
-            check.parentElement.parentElement.classList.add('error');
-        }
-    });
-}
+// if(btn) {
+//     btn.addEventListener('click', function () {
+//         if(!check.checked) {
+//             check.parentElement.parentElement.classList.add('error');
+//         }
+//     });
+// }
 
 /*
 Popup toggle theme
@@ -237,7 +234,8 @@ $('.copy-btn').on('click', function (event) {
 Toggle password visible
  */
 $('.toggle-visible-pass').on('click', function () {
-    const inputPass = $(this).closest('.access-data-item').find('input');
+    const inputPass = $(this).parent().find('input');
+    $(this).toggleClass('is-active');
     if(inputPass.attr('type') === 'password') {
         inputPass.attr('type', 'text');
     } else {
@@ -273,4 +271,49 @@ $('.open-modal').magnificPopup({
             $('#edit-order-carousel').slick('setPosition');
         },
     }
+});
+
+/*
+Switcher toggle
+ */
+const doSwitcher = (input) => {
+    const checked = input.prop('checked');
+    const target = input.attr('data-target');
+    const targetElems = $('[data-switcher="'+ target +'"]');
+    checked ? targetElems.addClass('disabled') : targetElems.removeClass('disabled');
+};
+
+$('.switcher-input').on('change', function () {
+   doSwitcher($(this));
+});
+
+const checkSwitcher = () => {
+    $('.switcher-input').each(function () {
+       doSwitcher($(this));
+    });
+};
+
+checkSwitcher();
+
+/*
+Toggle custom alert
+ */
+const openAlert = (text) => {
+    $.magnificPopup.close();
+    $('.alert').fadeIn(200);
+    $('.alert-box').html(text);
+    setTimeout(function () {
+        $('.alert').fadeOut(200);
+    }, 3000);
+};
+
+$('.alert-bg').on('click', function () {
+    $('.alert').fadeOut(200);
+});
+
+/*
+Hide site message
+ */
+$(document).on('click', '.information-close', function () {
+    $('.message').hide();
 });

@@ -21,7 +21,7 @@ const replace = require('gulp-replace');
 
 const files = {
     scssPath: [ 'src/sass/main.scss' ],
-    jsPath: ['src/libs/jquery-3.3.1.min.js', 'src/libs/*.js', 'src/js/index.js'],
+    jsPath: ['src/libs/jquery-3.3.1.min.js', 'src/libs/*.js', '!src/libs/additional-methods.min.js', 'src/libs/additional-methods.min.js', 'src/js/index.js'],
     htmlPath: [ 'src/html/*.html' ],
 };
 
@@ -86,6 +86,7 @@ function watchTask() {
     watch(['src/js/index.js'], parallel(jsTask));
     watch('src/html/**/*', htmlTask);
     watch('src/pages/*', moveHtml);
+    watch(['src/validation.js'], moveValidationFile);
 
 }
 
@@ -147,11 +148,16 @@ function svg() {
         .pipe(dest('src/images/'))
 }
 
+function moveValidationFile() {
+    return src('src/validation.js').pipe(dest('dist/js'));
+}
+
 exports.build = series(
     removeBuild,
     parallel(htmlTask, scssTask, jsTask),
     moveHtml,
     moveFonts,
     moveImages,
-    svg
+    svg,
+    moveValidationFile
 );

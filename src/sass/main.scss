@@ -29,6 +29,7 @@ Pages
 @import "pages/panel/access";
 @import "pages/panel/backup";
 @import "pages/panel/orders";
+@import "pages/panel/settings";
 
 /*
 Components
@@ -44,3 +45,5 @@ Components
 @import "components/table";
 @import "components/tooltip";
 @import "components/modal";
+@import "components/switcher";
+@import "components/alert";

@@ -36,6 +36,18 @@
 <body>
 
 <main id="wrapper">
+<div class="message">
+  <div class="information">
+    <div class="information-icon">
+      <svg class="icon"><use xlink:href="images/sprite.svg#alert"></use></svg>
+    </div>
+    <p class="information-title">KrediTkort ógilt</p>
+    <p class="information-description"><a href="#">Skoða nánar</a></p>
+    <div class="information-close">
+      <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+    </div>
+  </div>
+</div>
 <header class="header">
   <div class="container">
     <div class="header-panel">
@@ -380,9 +392,43 @@
     </div>
   </div>
 </div>
+
+<div class="modal" id="delete-market">
+  <div class="modal-box text-center">
+    <div class="modal-box-head">
+      <h5 class="title-4 modal-title">Viltu eyða Sölutorgið?</h5>
+      <label class="input-container-check">
+        <input type="checkbox" value="agree" class="input-check detect-agree-input" data-target="#delete-marketplace">
+        <span class="input-check-icon">
+          <svg class="icon"><use xlink:href="images/sprite.svg#selected"></use></svg>
+        </span>
+        <span class="input-check-title">Já ég er viss!</span>
+      </label>
+    </div>
+    <div class="modal-box-body">
+      <div class="input-container">
+        <input type="password" class="input" placeholder="Sláðu inn lykilorðið þitt">
+        <div class="input-container-btn">
+          <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+        </div>
+        <button class="access-icon toggle-visible-pass">
+          <svg class="icon __visible"><use xlink:href="images/sprite.svg#visible"></use></svg>
+          <svg class="icon __invisible"><use xlink:href="images/sprite.svg#invisible"></use></svg>
+        </button>
+      </div>
+      <button class="btn btn-md btn-danger disabled" id="delete-marketplace" onclick="openAlert('Vef hefur verið eytt');">EyÐa vefnum</button>
+    </div>
+  </div>
+</div>
+
+<div class="alert">
+  <div class="alert-bg"></div>
+  <div class="alert-box"></div>
+</div>
 </main>
 
 <script src="js/scripts.min.js"></script>
+<script src="js/validation.js"></script>
 
 </body>
 </html>

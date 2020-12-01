@@ -13,6 +13,9 @@
           background-color: var(--color-white);
           border-bottom: 1px var(--color-gray-200) solid;
           padding: 63px 24px 23px;
+            .input-container-check{
+              margin-top: 10px;
+            }
         }
         &-body{
           padding: 24px;
@@ -32,6 +35,9 @@
             @include d(480){
               margin-top: 88px;
             }
+        }
+        @include d(480){
+          min-height: 100vh;
         }
     }
     &-label{

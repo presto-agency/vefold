@@ -89,10 +89,22 @@
       padding: 0;
       background-color: transparent;
       margin-right: 20px;
+      position: relative;
         .icon{
           width: 15px;
           height: 15px;
           fill: var(--color-gray-400);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          transition: opacity .2s ease;
+            &.__visible{
+              opacity: 0;
+            }
+            &.__invisible{
+              opacity: 1;
+            }
         }
         &:last-child{
           margin-right: 0;
@@ -103,6 +115,16 @@
               top: -2px;
               right: 0;
             }
+        }
+        &.is-active{
+          .icon{
+            &.__visible{
+              opacity: 1;
+            }
+            &.__invisible{
+              opacity: 0;
+            }
+          }
         }
     }
     &-action{
