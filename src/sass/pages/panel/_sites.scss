@@ -110,6 +110,7 @@
     &-description{
       padding: 5px 5px 5px 22px;
       font-size: 16px;
+      position: relative;
         &-title{
           margin-bottom: 14px;
             @include d(575){
@@ -155,6 +156,7 @@
       padding: 24px 20px 24px 14px;
       border-top: 1px var(--color-gray-200) solid;
       display: none;
+      position: relative;
         &-box{
           display: flex;
           justify-content: space-between;
