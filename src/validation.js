@@ -2,10 +2,6 @@
 Sign in
  */
 
-$('#sign-in').on('submit', function (event) {
-   event.preventDefault();
-});
-
 $('#sign-in').validate({
     rules: {
         name: {
@@ -26,6 +22,10 @@ $('#sign-in').validate({
         form.submit();
     },
 });
+
+/*
+Sign up
+ */
 
 $('#sign-up').validate({
     rules: {
@@ -49,11 +49,50 @@ $('#sign-up').validate({
             required: true
         }
     },
-    messages: {
-        name: 'Reiturinn er nauðsynlegur',
-        email: {
-            required: 'Reiturinn er nauðsynlegur'
+    submitHandler: function(form) {
+        form.submit();
+    },
+});
+
+/*
+Create user
+ */
+$('#create-user').validate({
+    rules: {
+        admin: "required",
+        email: "required",
+        password: {
+            required: true,
+            minlength: 8,
         },
-        password: {}
-    }
+        confirmPassword: {
+            required: true,
+            minlength: 8,
+            equalTo: '#password'
+        },
+        package: "required",
+        paymentType: "required",
+        name: "required",
+        socNumber: "required",
+        address: "required",
+        municipality: "required",
+        cardName: "required",
+        cardNumber: {
+            required: true,
+            minlength: 16,
+            maxlength: 16,
+            number: true
+        },
+        cardDay: "required",
+        cardMonth: "required",
+        cvc: {
+            required: true,
+            maxlength: 3,
+            minlength: 3,
+            number: true
+        }
+    },
+    submitHandler: function(form) {
+        form.submit();
+    },
 });

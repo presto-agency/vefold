@@ -24,6 +24,11 @@
             @include d(767){
               margin-top: 20px;
             }
+            .slick-active{
+                & ~ li{
+                  pointer-events: none;
+                }
+            }
         }
         @include d(767){
           margin: 0 -16px;

@@ -19,19 +19,19 @@
     <div class="payment-column">
       <p class="title-14">Greiðandi</p>
       <div class="input-container">
-        <input type="text" class="input" placeholder="Fullt nafn eða fyrirtæki" />
+        <input type="text" name="name" class="input" placeholder="Fullt nafn eða fyrirtæki" />
         <div class="input-container-btn">
           <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
         </div>
       </div>
       <div class="input-container">
-        <input type="text" class="input" placeholder="Kennitala" />
+        <input type="text" name="socNumber" class="input" placeholder="Kennitala" />
         <div class="input-container-btn">
           <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
         </div>
       </div>
       <div class="input-container">
-        <input type="text" class="input" placeholder="Heimilisfang" />
+        <input type="text" name="address" class="input" placeholder="Heimilisfang" />
         <div class="input-container-btn">
           <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
         </div>
@@ -55,13 +55,13 @@
     <div class="payment-column">
       <p class="title-14">Kortaupplýsingar</p>
       <div class="input-container">
-        <input type="text" class="input" placeholder="Fullt nafn eins og það er á korti" />
+        <input type="text" name="cardName" class="input" placeholder="Fullt nafn eins og það er á korti" />
         <div class="input-container-btn">
           <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
         </div>
       </div>
       <div class="input-container">
-        <input type="text" class="input" placeholder="Kortanúmer án bila eða bandstrika" />
+        <input type="text" name="cardNumber" class="input" placeholder="Kortanúmer án bila eða bandstrika" />
         <div class="input-container-btn">
           <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
         </div>
@@ -70,7 +70,7 @@
         <p>Gildistími</p>
         <div class="input-container">
           <svg class="icon icon-down"><use xlink:href="images/sprite.svg#collapse-arrow"></use></svg>
-          <select name="municipality" class="select">
+          <select name="cardDay" class="select">
             <option value="Mánudagur" selected>Mán.</option>
             <option value="Þriðjudagur">Þri.</option>
             <option value="Miðvikudagur">Mið.</option>
@@ -82,7 +82,7 @@
         </div>
         <div class="input-container">
           <svg class="icon icon-down"><use xlink:href="images/sprite.svg#collapse-arrow"></use></svg>
-          <select name="municipality" class="select" required>
+          <select name="cardMonth" class="select" required>
             <option value="" disabled selected>Ár</option>
             <option value="2020">2020</option>
             <option value="2021">2021</option>
@@ -95,7 +95,7 @@
         </div>
       </div>
       <div class="input-container">
-        <input type="text" class="input" placeholder="CVC númer" />
+        <input type="text" name="cvc" class="input" placeholder="CVC númer" />
         <div class="input-container-btn">
           <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
         </div>

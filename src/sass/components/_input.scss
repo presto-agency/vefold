@@ -30,7 +30,6 @@
             &.attention{
               border-radius: 2px;
               color: var(--color-white);
-              opacity: 1;
               font-size: 10px;
               letter-spacing: .04em;
               padding: 6px 14px;
@@ -216,6 +215,12 @@
               padding-right: 40px;
             }
           }
+          label.error{
+            @include d(480){
+              font-size: 8px;
+              right: 30px;
+            }
+          }
         }
         .toggle-visible-pass{
           position: absolute;
@@ -323,12 +328,14 @@
           & ~ .input-check-message{
             display: inline-block;
           }
+          & ~ .package-checked{
+            border-color: var(--color-danger);
+          }
         }
     }
     &.error{
       border-color: var(--color-danger);
       border-width: 2px;
-      padding-right: 180px;
         & ~ .input-container-btn{
           opacity: 1;
         }
@@ -347,6 +354,11 @@
       height: 40px;
       padding: 0 8px;
       font-size: 12px;
+    }
+    &[type="password"].valid{
+      & ~ .attention.__check{
+        opacity: 1;
+      }
     }
     &:focus{
       outline: none;
@@ -372,5 +384,8 @@
     }
     &:invalid{
       color: var(--color-gray-300);
+    }
+    &.error ~ label.error{
+      display: none !important;
     }
 }

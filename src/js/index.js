@@ -317,3 +317,15 @@ Hide site message
 $(document).on('click', '.information-close', function () {
     $('.message').hide();
 });
+
+$('.next-step').on('click', function () {
+    const carousel = $(this).attr('data-carousel');
+    const currentSlide = $('.create-carousel-slide.slick-current');
+    let i = 0;
+    setTimeout(function () {
+        currentSlide.find('.input.error').each(function () {
+            i += 1;
+        });
+        !i ? $('#create-carousel').slick('slickNext') : null;
+    }, 100);
+});

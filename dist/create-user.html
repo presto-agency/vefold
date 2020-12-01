@@ -192,300 +192,299 @@
 </header>
 <section class="section create">
   <div class="container">
-    <div class="create-carousel carousel" id="create-carousel">
-      <div class="create-carousel-slide">
-        <div class="create-box">
-          <div class="create-box-title">
-            <h1 class="title-2">Búðu til þinn WordPress notanda</h1>
-          </div>
-          <div class="create-box-content">
-            <div class="input-container __label __xl">
-              <span class="input-container-label">WordPress Stjórnandi</span>
-              <input type="text" class="input input-sm" value="Bobby Johnson">
-              <!--              <span class="input-container-message">Rangt netfang eða lykilorð</span>-->
-              <div class="input-container-btn">
-                <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
-              </div>
+    <form id="create-user">
+      <div class="create-carousel carousel" id="create-carousel">
+        <div class="create-carousel-slide">
+          <div class="create-box">
+            <div class="create-box-title">
+              <h1 class="title-2">Búðu til þinn WordPress notanda</h1>
             </div>
-            <div class="input-container __label __xl error">
-              <span class="input-container-label">Netfang</span>
-              <input type="text" class="input input-sm" value="robertQsiminn.is">
-              <!--              <span class="input-container-message">Rangt netfang eða lykilorð</span>-->
-              <div class="input-container-btn">
-                <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+            <div class="create-box-content">
+              <div class="input-container __label __xl">
+                <span class="input-container-label">WordPress Stjórnandi</span>
+                <input type="text" name="admin" class="input input-sm">
+                <div class="input-container-btn">
+                  <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+                </div>
               </div>
-            </div>
-            <div class="input-container __label __xl">
-              <span class="input-container-message attention __wrong">Slæmt</span>
-              <span class="input-container-label">Lykilorð</span>
-              <input type="password" class="input input-sm" value="robertQsiminn.is">
-              <!--              <span class="input-container-message">Rangt netfang eða lykilorð</span>-->
-              <div class="input-container-btn">
-                <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+              <div class="input-container __label __xl">
+                <span class="input-container-label">Netfang</span>
+                <input type="email" name="email" class="input input-sm">
+                <div class="input-container-btn">
+                  <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+                </div>
               </div>
-            </div>
-            <div class="input-container __label __xl">
-              <span class="input-container-message attention __check">
+              <div class="input-container __label __xl">
+                <span class="input-container-label">Lykilorð</span>
+                <input type="password" name="password" id="password" class="input input-sm">
+            <!--    <span class="input-container-message attention __wrong">Slæmt</span>-->
+                <div class="input-container-btn">
+                  <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+                </div>
+              </div>
+              <div class="input-container __label __xl">
+              <span class="input-container-label">Lykilorð aftur</span>
+              <input type="password" name="confirmPassword" class="input input-sm">
+                <span class="input-container-message attention __check">
                 <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
               </span>
-              <span class="input-container-label">Lykilorð aftur</span>
-              <input type="password" class="input input-sm" value="robertQsiminn.is">
-              <!--              <span class="input-container-message">Rangt netfang eða lykilorð</span>-->
               <div class="input-container-btn">
                 <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="create-carousel-slide">
-        <div class="create-box">
-          <div class="create-box-title">
-            <h2 class="title-2">Veldu pakka sem hentar þér</h2>
-          </div>
-          <div class="create-box-content">
-            <div class="packages">
-              <div class="packages-box">
-                <label class="package">
-                  <input type="radio" class="input input-check" name="package" value="Léttvigt">
-                  <span class="package-checked">
-                    <span class="package-checked-icon">
-                      <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
-                    </span>
-                  </span>
-                  <span class="package-title title-4">Léttvigt</span>
-                  <span class="package-description">Tilvalið fyrir þá sem eru að taka sín fyrstu skref með WordPress, ætal að setja upp einstaklingssíðu eða blogg.</span>
-                  <span class="package-price">
-                    <span><span class="package-price-value">2.480</span><span class="package-price-label">kr./mán.</span></span>
-                  </span>
-                </label>
-              </div>
-              <div class="packages-box">
-                <label class="package">
-                  <input type="radio" class="input input-check" name="package" value="Millivigt">
-                  <span class="package-checked">
-                    <span class="package-checked-icon">
-                      <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
-                    </span>
-                  </span>
-                  <span class="package-title">
-                    <span class="title-4">Millivigt</span>
-                  </span>
-                  <span class="package-description">
-                    <span>Tilvalið fyrir þá sem eru að taka sín fyrstu skref með WordPress, ætal að setja upp einstaklingssíðu eða blogg.</span>
-                  </span>
-                  <span class="package-price">
-                    <span><span class="package-price-value">4.960</span><span class="package-price-label">kr./mán.</span></span>
-                  </span>
-                </label>
-              </div>
-              <div class="packages-box">
-                <label class="package">
-                  <input type="radio" class="input input-check" name="package" value="Þungavigt">
-                  <span class="package-checked">
-                    <span class="package-checked-icon">
-                      <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
-                    </span>
-                  </span>
-                  <span class="package-title">
-                    <span class="title-4">Þungavigt</span>
-                  </span>
-                  <span class="package-description">
-                    <span>Tilvalið fyrir þá sem eru að taka sín fyrstu skref með WordPress, ætal að setja upp einstaklingssíðu eða blogg.</span>
-                  </span>
-                  <span class="package-detail">
-                    <span><strong>Við höfum samband við þig!</strong></span>
-                  </span>
-                </label>
-              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="create-carousel-slide">
-        <div class="create-box">
-          <div class="create-box-title">
-            <h2 class="title-2">Hvernig viltu greiða fyrir hýsinguna?</h2>
-          </div>
-          <div class="create-box-content">
-            <div class="payment-type">
-              <div class="payment-type-box">
-                <label class="render">
-                  <input type="radio" class="input input-check" name="payment-type" value="Mánaðarlegar greiðsur">
-                  <span class="render-checked">
-                    <span class="render-checked-icon">
-                      <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
+        <div class="create-carousel-slide">
+          <div class="create-box">
+            <div class="create-box-title">
+              <h2 class="title-2">Veldu pakka sem hentar þér</h2>
+            </div>
+            <div class="create-box-content">
+              <div class="packages">
+                <div class="packages-box">
+                  <label class="package">
+                    <input type="radio" class="input input-check" name="package" value="Léttvigt">
+                    <span class="package-checked">
+                      <span class="package-checked-icon">
+                        <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
+                      </span>
                     </span>
-                  </span>
-                  <span class="render-title title-4">Mánaðarlegar greiðsur</span>
-                  <span class="render-price">
-                    <span class="render-price-value">2.480</span>
-                    <span class="render-price-label">kr.</span>
-                  </span>
-                </label>
-              </div>
-              <div class="payment-type-box">
-                <label class="render">
-                  <input type="radio" class="input input-check" name="payment-type" value="Árlegar greiðslur">
-                  <span class="render-checked">
-                    <span class="render-checked-icon">
-                      <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
+                    <span class="package-title title-4">Léttvigt</span>
+                    <span class="package-description">Tilvalið fyrir þá sem eru að taka sín fyrstu skref með WordPress, ætal að setja upp einstaklingssíðu eða blogg.</span>
+                    <span class="package-price">
+                      <span><span class="package-price-value">2.480</span><span class="package-price-label">kr./mán.</span></span>
                     </span>
-                  </span>
-                  <span class="render-title title-4">Árlegar greiðslur</span>
-                  <span class="render-price">
-                    <span class="render-price-value">53.568</span>
-                    <span class="render-price-label">kr.</span>
-                  </span>
-                  <span class="render-detail">10% afsláttur</span>
-                </label>
+                  </label>
+                </div>
+                <div class="packages-box">
+                  <label class="package">
+                    <input type="radio" class="input input-check" name="package" value="Millivigt">
+                    <span class="package-checked">
+                      <span class="package-checked-icon">
+                        <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
+                      </span>
+                    </span>
+                    <span class="package-title">
+                      <span class="title-4">Millivigt</span>
+                    </span>
+                    <span class="package-description">
+                      <span>Tilvalið fyrir þá sem eru að taka sín fyrstu skref með WordPress, ætal að setja upp einstaklingssíðu eða blogg.</span>
+                    </span>
+                    <span class="package-price">
+                      <span><span class="package-price-value">4.960</span><span class="package-price-label">kr./mán.</span></span>
+                    </span>
+                  </label>
+                </div>
+                <div class="packages-box">
+                  <label class="package">
+                    <input type="radio" class="input input-check" name="package" value="Þungavigt">
+                    <span class="package-checked">
+                      <span class="package-checked-icon">
+                        <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
+                      </span>
+                    </span>
+                    <span class="package-title">
+                      <span class="title-4">Þungavigt</span>
+                    </span>
+                    <span class="package-description">
+                      <span>Tilvalið fyrir þá sem eru að taka sín fyrstu skref með WordPress, ætal að setja upp einstaklingssíðu eða blogg.</span>
+                    </span>
+                    <span class="package-detail">
+                      <span><strong>Við höfum samband við þig!</strong></span>
+                    </span>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="create-carousel-slide">
-        <div class="create-box">
-          <div class="payment-title">
-            <div class="payment-title-column">
-              <h2 class="title-2">Hvernig viltu greiða?</h2>
-              <h4 class="title-5"><strong>Millivigt:</strong> 4.960 kr./mán.</h4>
+        <div class="create-carousel-slide">
+          <div class="create-box">
+            <div class="create-box-title">
+              <h2 class="title-2">Hvernig viltu greiða fyrir hýsinguna?</h2>
             </div>
-            <div class="payment-title-column">
-              <div class="payment-list">
-                <img src="../images/payment/visa.svg" alt="Visa">
-                <img src="../images/payment/mastercard.svg" alt="Mastercard">
-                <img src="../images/payment/amex.svg" alt="Amex">
+            <div class="create-box-content">
+              <div class="payment-type">
+                <div class="payment-type-box">
+                  <label class="render">
+                    <input type="radio" class="input input-check" name="paymentType" value="Mánaðarlegar greiðsur">
+                    <span class="render-checked">
+                      <span class="render-checked-icon">
+                        <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
+                      </span>
+                    </span>
+                    <span class="render-title title-4">Mánaðarlegar greiðsur</span>
+                    <span class="render-price">
+                      <span class="render-price-value">2.480</span>
+                      <span class="render-price-label">kr.</span>
+                    </span>
+                  </label>
+                </div>
+                <div class="payment-type-box">
+                  <label class="render">
+                    <input type="radio" class="input input-check" name="paymentType" value="Árlegar greiðslur">
+                    <span class="render-checked">
+                      <span class="render-checked-icon">
+                        <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
+                      </span>
+                    </span>
+                    <span class="render-title title-4">Árlegar greiðslur</span>
+                    <span class="render-price">
+                      <span class="render-price-value">53.568</span>
+                      <span class="render-price-label">kr.</span>
+                    </span>
+                    <span class="render-detail">10% afsláttur</span>
+                  </label>
+                </div>
               </div>
-              <p class="title-12 ttu text-right hidden-xxs">
-                <svg class="icon"><use xlink:href="images/sprite.svg#lock-password"></use></svg>DulkÓÐuÐ samskipti
-              </p>
             </div>
           </div>
-          <div class="create-box-content">
-            <div class="payment">
-              <div class="payment-column">
-                <p class="title-14">Greiðandi</p>
-                <div class="input-container">
-                  <input type="text" class="input" placeholder="Fullt nafn eða fyrirtæki">
-                  <div class="input-container-btn">
-                    <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
-                  </div>
+        </div>
+        <div class="create-carousel-slide">
+          <div class="create-box">
+            <div class="payment-title">
+              <div class="payment-title-column">
+                <h2 class="title-2">Hvernig viltu greiða?</h2>
+                <h4 class="title-5"><strong>Millivigt:</strong> 4.960 kr./mán.</h4>
+              </div>
+              <div class="payment-title-column">
+                <div class="payment-list">
+                  <img src="../images/payment/visa.svg" alt="Visa">
+                  <img src="../images/payment/mastercard.svg" alt="Mastercard">
+                  <img src="../images/payment/amex.svg" alt="Amex">
                 </div>
-                <div class="input-container">
-                  <input type="text" class="input" placeholder="Kennitala">
-                  <div class="input-container-btn">
-                    <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
-                  </div>
-                </div>
-                <div class="input-container">
-                  <input type="text" class="input" placeholder="Heimilisfang">
-                  <div class="input-container-btn">
-                    <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
-                  </div>
-                </div>
-                <div class="input-container">
-                  <svg class="icon icon-down"><use xlink:href="images/sprite.svg#collapse-arrow"></use></svg>
-                  <select name="municipality" class="select" required>
-                    <option value="" disabled="disabled" selected="selected">Veldu bæjarfélag</option>
-                    <option value="Bæjarfélag 1">Bæjarfélag 1</option>
-                    <option value="Bæjarfélag 2">Bæjarfélag 2</option>
-                    <option value="Bæjarfélag 3">Bæjarfélag 3</option>
-                    <option value="Bæjarfélag 4">Bæjarfélag 4</option>
-                    <option value="Bæjarfélag 5">Bæjarfélag 5</option>
-                    <option value="Bæjarfélag 6">Bæjarfélag 6</option>
-                  </select>
-                </div>
-                <p class="title-12 ttu text-right hidden display-xxs">
+                <p class="title-12 ttu text-right hidden-xxs">
                   <svg class="icon"><use xlink:href="images/sprite.svg#lock-password"></use></svg>DulkÓÐuÐ samskipti
                 </p>
               </div>
-              <div class="payment-column">
-                <p class="title-14">Kortaupplýsingar</p>
-                <div class="input-container">
-                  <input type="text" class="input" placeholder="Fullt nafn eins og það er á korti">
-                  <div class="input-container-btn">
-                    <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
-                  </div>
-                </div>
-                <div class="input-container">
-                  <input type="text" class="input" placeholder="Kortanúmer án bila eða bandstrika">
-                  <div class="input-container-btn">
-                    <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
-                  </div>
-                </div>
-                <div class="input-container-row">
-                  <p>Gildistími</p>
+            </div>
+            <div class="create-box-content">
+              <div class="payment">
+                <div class="payment-column">
+                  <p class="title-14">Greiðandi</p>
                   <div class="input-container">
-                    <svg class="icon icon-down"><use xlink:href="images/sprite.svg#collapse-arrow"></use></svg>
-                    <select name="municipality" class="select">
-                      <option value="Mánudagur" selected="selected">Mán.</option>
-                      <option value="Þriðjudagur">Þri.</option>
-                      <option value="Miðvikudagur">Mið.</option>
-                      <option value="Fimmtudagur">Fim.</option>
-                      <option value="Föstudagur">Fös.</option>
-                      <option value="Laugardagur">Lau.</option>
-                      <option value="Sunnudagur">Sun.</option>
-                    </select>
+                    <input type="text" name="name" class="input" placeholder="Fullt nafn eða fyrirtæki">
+                    <div class="input-container-btn">
+                      <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+                    </div>
+                  </div>
+                  <div class="input-container">
+                    <input type="text" name="socNumber" class="input" placeholder="Kennitala">
+                    <div class="input-container-btn">
+                      <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+                    </div>
+                  </div>
+                  <div class="input-container">
+                    <input type="text" name="address" class="input" placeholder="Heimilisfang">
+                    <div class="input-container-btn">
+                      <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+                    </div>
                   </div>
                   <div class="input-container">
                     <svg class="icon icon-down"><use xlink:href="images/sprite.svg#collapse-arrow"></use></svg>
                     <select name="municipality" class="select" required>
-                      <option value="" disabled="disabled" selected="selected">Ár</option>
-                      <option value="2020">2020</option>
-                      <option value="2021">2021</option>
-                      <option value="2022">2022</option>
-                      <option value="2023">2023</option>
-                      <option value="2024">2024</option>
-                      <option value="2025">2025</option>
-                      <option value="2026">2026</option>
+                      <option value="" disabled="disabled" selected="selected">Veldu bæjarfélag</option>
+                      <option value="Bæjarfélag 1">Bæjarfélag 1</option>
+                      <option value="Bæjarfélag 2">Bæjarfélag 2</option>
+                      <option value="Bæjarfélag 3">Bæjarfélag 3</option>
+                      <option value="Bæjarfélag 4">Bæjarfélag 4</option>
+                      <option value="Bæjarfélag 5">Bæjarfélag 5</option>
+                      <option value="Bæjarfélag 6">Bæjarfélag 6</option>
                     </select>
                   </div>
+                  <p class="title-12 ttu text-right hidden display-xxs">
+                    <svg class="icon"><use xlink:href="images/sprite.svg#lock-password"></use></svg>DulkÓÐuÐ samskipti
+                  </p>
                 </div>
-                <div class="input-container">
-                  <input type="text" class="input" placeholder="CVC númer">
-                  <div class="input-container-btn">
-                    <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+                <div class="payment-column">
+                  <p class="title-14">Kortaupplýsingar</p>
+                  <div class="input-container">
+                    <input type="text" name="cardName" class="input" placeholder="Fullt nafn eins og það er á korti">
+                    <div class="input-container-btn">
+                      <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+                    </div>
                   </div>
-                </div>
-                <div class="hidden display-xs text-right">
-                  <label class="input-container-check">
-                  <input type="checkbox" value="agree" class="input-check detect-agree-input" data-target="#start-payment" id="payment-check">
-                  <span class="input-check-icon">
-                          <svg class="icon"><use xlink:href="images/sprite.svg#selected"></use></svg>
-                        </span>
-                  <span class="input-check-title">Samþykkja <a href="#">skilmála</a></span>
-                </label>
+                  <div class="input-container">
+                    <input type="text" name="cardNumber" class="input" placeholder="Kortanúmer án bila eða bandstrika">
+                    <div class="input-container-btn">
+                      <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+                    </div>
+                  </div>
+                  <div class="input-container-row">
+                    <p>Gildistími</p>
+                    <div class="input-container">
+                      <svg class="icon icon-down"><use xlink:href="images/sprite.svg#collapse-arrow"></use></svg>
+                      <select name="cardDay" class="select">
+                        <option value="Mánudagur" selected="selected">Mán.</option>
+                        <option value="Þriðjudagur">Þri.</option>
+                        <option value="Miðvikudagur">Mið.</option>
+                        <option value="Fimmtudagur">Fim.</option>
+                        <option value="Föstudagur">Fös.</option>
+                        <option value="Laugardagur">Lau.</option>
+                        <option value="Sunnudagur">Sun.</option>
+                      </select>
+                    </div>
+                    <div class="input-container">
+                      <svg class="icon icon-down"><use xlink:href="images/sprite.svg#collapse-arrow"></use></svg>
+                      <select name="cardMonth" class="select" required>
+                        <option value="" disabled="disabled" selected="selected">Ár</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="input-container">
+                    <input type="text" name="cvc" class="input" placeholder="CVC númer">
+                    <div class="input-container-btn">
+                      <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+                    </div>
+                  </div>
+                  <div class="hidden display-xs text-right">
+                    <label class="input-container-check">
+                    <input type="checkbox" value="agree" class="input-check detect-agree-input" data-target="#start-payment" id="payment-check">
+                    <span class="input-check-icon">
+                            <svg class="icon"><use xlink:href="images/sprite.svg#selected"></use></svg>
+                          </span>
+                    <span class="input-check-title">Samþykkja <a href="#">skilmála</a></span>
+                  </label>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="carousel-nav first-step">
-      <div class="carousel-nav-part">
-        <button class="link link-ttu carousel-nav-back" data-carousel="#create-carousel" data-slide="prev">
-          <svg class="icon"><use xlink:href="images/sprite.svg#back"></use></svg>
-          til baka
-        </button>
-      </div>
-      <div class="carousel-nav-part">
-        <div class="payment-agree">
-          <div class="hidden-xs">
-            <label class="input-container-check">
-            <input type="checkbox" value="agree" class="input-check detect-agree-input" data-target="#start-payment" id="payment-check">
-            <span class="input-check-icon">
-                <svg class="icon"><use xlink:href="images/sprite.svg#selected"></use></svg>
-              </span>
-            <span class="input-check-title">Samþykkja <a href="#">skilmála</a></span>
-          </label>
-          </div>
-          <a href="#" class="btn btn-md disabled" id="start-payment">GreiÐa</a>
+      <div class="carousel-nav first-step">
+        <div class="carousel-nav-part">
+          <button class="link link-ttu carousel-nav-back" data-carousel="#create-carousel" data-slide="prev">
+            <svg class="icon"><use xlink:href="images/sprite.svg#back"></use></svg>
+            til baka
+          </button>
         </div>
-        <button class="btn btn-md" data-carousel="#create-carousel" data-slide="next">Áfram</button>
+        <div class="carousel-nav-part">
+          <div class="payment-agree">
+            <div class="hidden-xs">
+              <label class="input-container-check">
+              <input type="checkbox" value="agree" class="input-check detect-agree-input" data-target="#start-payment" id="payment-check">
+              <span class="input-check-icon">
+                  <svg class="icon"><use xlink:href="images/sprite.svg#selected"></use></svg>
+                </span>
+              <span class="input-check-title">Samþykkja <a href="#">skilmála</a></span>
+            </label>
+            </div>
+            <button class="btn btn-md disabled" id="start-payment" type="submit">GreiÐa</button>
+          </div>
+<!--          <button class="btn btn-md" data-carousel="#create-carousel" data-slide="next">Áfram</button>-->
+          <button class="btn btn-md next-step" type="submit">Áfram</button>
+        </div>
       </div>
-    </div>
+    </form>
   </div>
 </section>
 <footer class="footer">
