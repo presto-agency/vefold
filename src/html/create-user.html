@@ -2,59 +2,36 @@
 //= components/_header-without-notifications.html
 <section class="section create">
   <div class="container">
-    <form id="create-user">
-      <div class="create-carousel carousel" id="create-carousel">
-        <div class="create-carousel-slide">
-          <div class="create-box">
+    <div class="create-carousel carousel" id="create-carousel">
+      <div class="create-carousel-slide">
+        <div class="create-box">
+          <form id="create-step-1">
             //= create-steps/_step-1.html
-          </div>
+          </form>
         </div>
-        <div class="create-carousel-slide">
-          <div class="create-box">
+      </div>
+      <div class="create-carousel-slide">
+        <div class="create-box">
+          <form id="create-step-2">
             //= create-steps/_step-2.html
-          </div>
+          </form>
         </div>
-        <div class="create-carousel-slide">
-          <div class="create-box">
+      </div>
+      <div class="create-carousel-slide">
+        <div class="create-box">
+          <form id="create-step-3">
             //= create-steps/_step-3.html
-          </div>
+          </form>
         </div>
-        <div class="create-carousel-slide">
-          <div class="create-box">
+      </div>
+      <div class="create-carousel-slide">
+        <div class="create-box">
+          <form id="create-step-4">
             //= create-steps/_step-4.html
-          </div>
+          </form>
         </div>
       </div>
-      <div class="carousel-nav first-step">
-        <div class="carousel-nav-part">
-          <button class="link link-ttu carousel-nav-back" data-carousel="#create-carousel" data-slide="prev">
-            <svg class="icon"><use xlink:href="images/sprite.svg#back"></use></svg>
-            til baka
-          </button>
-        </div>
-        <div class="carousel-nav-part">
-          <div class="payment-agree">
-            <div class="hidden-xs">
-              <label class="input-container-check">
-              <input
-                type="checkbox"
-                value="agree"
-                class="input-check detect-agree-input"
-                data-target="#start-payment"
-                id="payment-check" />
-              <span class="input-check-icon">
-                  <svg class="icon"><use xlink:href="images/sprite.svg#selected"></use></svg>
-                </span>
-              <span class="input-check-title">Samþykkja <a href="#">skilmála</a></span>
-            </label>
-            </div>
-            <button class="btn btn-md disabled" id="start-payment" type="submit">GreiÐa</button>
-          </div>
-<!--          <button class="btn btn-md" data-carousel="#create-carousel" data-slide="next">Áfram</button>-->
-          <button class="btn btn-md next-step" type="submit">Áfram</button>
-        </div>
-      </div>
-    </form>
+    </div>
   </div>
 </section>
 //= components/_footer.html

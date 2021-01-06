@@ -338,6 +338,7 @@
                 }
             }
             &-thumb{
+              pointer-events: auto;
               &:after{
                 content: '';
                 position: absolute;

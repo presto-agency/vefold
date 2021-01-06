@@ -5,6 +5,7 @@
   font-size: 12px;
     &-head{
       background-color: var(--color-gray-100);
+      border-bottom: 1px solid var(--color-gray-200);
       padding: 14px 16px;
         &.active{
             .table-row-toggle{

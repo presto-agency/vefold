@@ -22,7 +22,7 @@
     &-title{
       display: flex;
       width: 100%;
-      margin-bottom: 81px;
+      margin-bottom: 60px;
         &-column{
           flex: 1;
             &:nth-child(2){
@@ -107,7 +107,8 @@
     &-agree{
       align-items: center;
       color: var(--color-gray-500);
-      display: none;
+      display: flex;
+      justify-content: flex-end;
         .btn{
           margin-left: 32px;
           color: var(--color-white);
@@ -222,6 +223,12 @@
           padding-top: 0;
           margin-top: -18px;
         }
+    }
+    .error[for="paymentType"]{
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+      z-index: -1;
     }
     @include d(767){
       min-height: 280px;

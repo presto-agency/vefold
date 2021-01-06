@@ -93,7 +93,7 @@ $('#create-carousel').slick({
     draggable: false,
     touchMove: false,
     accessibility: false,
-    adaptiveHeight: true,
+    // adaptiveHeight: true,
     responsive: [
         {
             breakpoint: 481,
@@ -103,10 +103,10 @@ $('#create-carousel').slick({
         }
     ]
 }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-    ( nextSlide + 1 ) === slick.slideCount ? carouselNav.addClass('last-step') : carouselNav.removeClass('last-step');
+    // ( nextSlide + 1 ) === slick.slideCount ? carouselNav.addClass('last-step') : carouselNav.removeClass('last-step');
     $('html, body').animate({scrollTop: 0}, 400);
 }).on('afterChange', function (event, slick, currentSlide) {
-    currentSlide === 0 ? carouselNav.addClass('first-step') : carouselNav.removeClass('first-step');
+    // currentSlide === 0 ? carouselNav.addClass('first-step') : carouselNav.removeClass('first-step');
 });
 
 /*
@@ -176,6 +176,26 @@ $('.link-icon.__collapse').on('click', function () {
 });
 
 /*
+Detect editable inputs width
+ */
+const setEditableInputWidth = () => {
+    $('.input-editable').each(function () {
+        let input = $(this);
+        let inputText = input.parent().find('.input-editable-value');
+        let inputTextWidth = inputText.outerWidth();
+        input.width(inputTextWidth);
+    }).on('input', function () {
+        let input = $(this);
+        let inputText = input.parent().find('.input-editable-value');
+        inputText.text(input.val());
+        input.width(inputText.outerWidth());
+    });
+};
+
+setEditableInputWidth();
+
+
+/*
 Tabs switch theme
  */
 $(document).on('click', '.tab', function () {
@@ -189,6 +209,7 @@ $(document).on('click', '.tab', function () {
     } else {
         tabBtn.addClass('active');
         tabContent.fadeIn(200);
+        setEditableInputWidth();
     }
 });
 
@@ -221,13 +242,16 @@ $('.copy-btn').on('click', function (event) {
         navigator.clipboard.writeText(text)
             .then(function () {
                 copyingSuccess(tooltipMessage, successText, defaultText);
+                console.log('copied', navigator.clipboard);
             }, function (error) {
                 console.log('error - ', error);
             });
     } else if(window.clipboardData) {
         window.clipboardData.setData('Text', text);
         copyingSuccess(tooltipMessage, successText, defaultText);
+        console.log('copied', window.clipboardData);
     }
+    console.log('click copied', navigator.clipboard);
 });
 
 /*

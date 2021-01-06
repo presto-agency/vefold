@@ -9,7 +9,7 @@
           @extend .light;
           position: relative;
           border-bottom: 1px var(--color-gray-300) solid;
-          padding: 0 3px;
+          display: inline-block;
             &:before,
             &:after{
               content: '';

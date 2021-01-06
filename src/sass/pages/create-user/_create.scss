@@ -1,26 +1,28 @@
 .create{
   padding: 80px 0 46px;
     &-carousel{
-      padding-bottom: 40px;
         &-slide{
           pointer-events: none;
             .create-box{
-              transform: translateX(-20px);
+              //transform: translateX(-20px);
             }
             &.slick-current{
               pointer-events: auto;
-                .create-box{
-                  transform: translateX(0);
-                }
-                & ~ .create-carousel-slide{
-                    .create-box{
-                      transform: translateX(20px);
-                    }
-                }
+                //.create-box{
+                //  transform: translateX(0);
+                //}
+                //& ~ .create-carousel-slide{
+                //    .create-box{
+                //      transform: translateX(20px);
+                //    }
+                //}
             }
         }
         .slick-dots{
-          margin-top: 54px;
+          position: absolute;
+          left: 50%;
+          bottom: 140px;
+          transform: translateX(-50%);
             @include d(767){
               margin-top: 20px;
             }
@@ -38,6 +40,7 @@
       max-width: 816px;
       margin: 0 auto;
       transition: transform .4s ease-out;
+      position: relative;
         &-title{
           max-width: 550px;
           margin-bottom: 38px;
@@ -64,6 +67,7 @@
         }
         &-content{
           overflow: hidden;
+          min-height: 366px;
             @include d(767){
               padding: 0 16px;
             }
@@ -85,6 +89,7 @@
     }
     .carousel-nav{
       max-width: 816px;
+      margin-top: 109px;
         .link{
             @include hover(991){
               &:hover{
@@ -100,7 +105,12 @@
           padding: 16px;
           z-index: 1;
           background-color: var(--color-gray-100);
+          margin-top: 0;
         }
+    }
+    .slick-slider .slick-list,
+    .slick-slider .slick-track{
+      transform: none;
     }
     @include d(575){
       padding: 40px 0;

@@ -333,6 +333,20 @@
           }
         }
     }
+    &-editable{
+      border: 1px transparent solid;
+      border-bottom: none;
+      padding: 0 3px;
+        &-value{
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        &:focus{
+          border-color: var(--color-gray-300);
+        }
+    }
     &.error{
       border-color: var(--color-danger);
       border-width: 2px;
@@ -359,9 +373,6 @@
       & ~ .attention.__check{
         opacity: 1;
       }
-    }
-    &:focus{
-      outline: none;
     }
     &::-webkit-input-placeholder {
       color: var(--color-gray-300);
