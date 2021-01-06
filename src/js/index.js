@@ -242,16 +242,13 @@ $('.copy-btn').on('click', function (event) {
         navigator.clipboard.writeText(text)
             .then(function () {
                 copyingSuccess(tooltipMessage, successText, defaultText);
-                console.log('copied', navigator.clipboard);
             }, function (error) {
                 console.log('error - ', error);
             });
     } else if(window.clipboardData) {
         window.clipboardData.setData('Text', text);
         copyingSuccess(tooltipMessage, successText, defaultText);
-        console.log('copied', window.clipboardData);
     }
-    console.log('click copied', navigator.clipboard);
 });
 
 /*
