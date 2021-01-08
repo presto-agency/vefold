@@ -28,8 +28,8 @@ const detectPopupPosition = (popup) => {
     const wWidth = window.innerWidth;
     const wPopup = popup.outerWidth();
     const lPopup = popup.offset().left;
-    console.log(wWidth + 10);
-    console.log(wPopup + lPopup);
+    // console.log(wWidth + 10);
+    // console.log(wPopup + lPopup);
     if( ( wPopup + lPopup ) > ( wWidth + 10 )) {
         popup.addClass('to-right');
     } else {
@@ -93,7 +93,7 @@ $('#create-carousel').slick({
     draggable: false,
     touchMove: false,
     accessibility: false,
-    // adaptiveHeight: true,
+    adaptiveHeight: true,
     responsive: [
         {
             breakpoint: 481,

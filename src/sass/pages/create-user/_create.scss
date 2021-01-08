@@ -23,9 +23,9 @@
           left: 50%;
           bottom: 140px;
           transform: translateX(-50%);
-            @include d(767){
-              margin-top: 20px;
-            }
+            //@include d(688){
+            //  bottom: 200px;
+            //}
             .slick-active{
                 & ~ li{
                   pointer-events: none;
