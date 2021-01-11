@@ -1,5 +1,6 @@
 .create{
   padding: 80px 0 46px;
+  min-height: calc(100vh - 206px);
     &-carousel{
         &-slide{
           pointer-events: none;
@@ -114,6 +115,7 @@
     }
     @include d(575){
       padding: 40px 0;
+      min-height: 0;
     }
     @include d(480){
       padding: 34px 0 0;

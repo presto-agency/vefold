@@ -2,6 +2,7 @@
   background-color: var(--color-white);
   border-top: 1px var(--color-gray-200) solid;
   padding: 42px 0 226px;
+  min-height: calc(100vh - 503px);
     &-list{
       display: flex;
       flex-wrap: wrap;
