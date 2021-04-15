@@ -93,7 +93,7 @@ $('#create-carousel').slick({
     draggable: false,
     touchMove: false,
     accessibility: false,
-    adaptiveHeight: true,
+    // adaptiveHeight: true,
     responsive: [
         {
             breakpoint: 481,
@@ -350,3 +350,7 @@ $('.next-step').on('click', function () {
         !i ? $('#create-carousel').slick('slickNext') : null;
     }, 100);
 });
+
+const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+};

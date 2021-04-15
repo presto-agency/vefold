@@ -117,6 +117,12 @@
               margin-bottom: 8px;
             }
         }
+        &-title,
+        &-subtitle{
+          max-width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
         &-action{
           display: none;
           margin-top: 10px;

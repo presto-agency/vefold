@@ -134,48 +134,48 @@
                           <div class="popup-box-close"></div>
                         </div>
                         <div class="user-data-form">
-                          <form>
-                            <div class="input-container __label">
+                          <form id="user-data">
+                            <label class="input-container __label">
                               <span class="input-container-label">Nafn notanda</span>
-                              <input type="text" class="input input-sm" value="Róbert Einarsson">
+                              <input type="text" name="name" class="input input-sm" value="Róbert Einarsson">
                               <span class="input-container-message">Rangt netfang eða lykilorð</span>
-                              <div class="input-container-btn">
+                              <span class="input-container-btn">
                                 <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
-                              </div>
-                            </div>
-                            <div class="input-container __label">
+                              </span>
+                            </label>
+                            <label class="input-container __label">
                               <span class="input-container-label">Netfang</span>
-                              <input type="text" class="input input-sm" value="robert@siminn.is">
+                              <input type="email" name="email" class="input input-sm" value="robert@siminn.is">
                               <span class="input-container-message">Rangt netfang eða lykilorð</span>
-                              <div class="input-container-btn">
+                              <span class="input-container-btn">
                                 <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
-                              </div>
-                            </div>
-                            <div class="input-container __label">
+                              </span>
+                            </label>
+                            <label class="input-container __label">
                               <span class="input-container-label">Núverandi lykilorð</span>
-                              <input type="password" class="input input-sm">
+                              <input type="password" name="currentPassword" class="input input-sm">
                               <span class="input-container-message">Rangt netfang eða lykilorð</span>
-                              <div class="input-container-btn">
+                              <span class="input-container-btn">
                                 <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
-                              </div>
-                            </div>
-                            <div class="input-container __label">
+                              </span>
+                            </label>
+                            <label class="input-container __label">
                               <span class="input-container-label">Nýtt lykilorð</span>
-                              <input type="password" class="input input-sm">
+                              <input type="password" name="newPassword" class="input input-sm" id="userNewPassword">
                               <span class="input-container-message">Rangt netfang eða lykilorð</span>
-                              <div class="input-container-btn">
+                              <span class="input-container-btn">
                                 <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
-                              </div>
-                            </div>
-                            <div class="input-container __label">
+                              </span>
+                            </label>
+                            <label class="input-container __label">
                               <span class="input-container-label">Nýtt lykilorð aftur</span>
-                              <input type="password" class="input input-sm">
+                              <input type="password" name="confirmNewPassword" class="input input-sm">
                               <span class="input-container-message">Rangt netfang eða lykilorð</span>
-                              <div class="input-container-btn">
+                              <span class="input-container-btn">
                                 <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
-                              </div>
-                            </div>
-                            <button class="btn btn-md">Vista</button>
+                              </span>
+                            </label>
+                            <button class="btn btn-md" type="submit">Vista</button>
                           </form>
                         </div>
                       </div>
@@ -202,7 +202,7 @@
             <div class="create-box-content">
               <div class="input-container __label __xl">
                 <span class="input-container-label">WordPress Stjórnandi</span>
-                <input type="text" name="admin" class="input input-sm">
+                <input type="text" name="name" class="input input-sm">
                 <div class="input-container-btn">
                   <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
                 </div>
@@ -217,7 +217,6 @@
               <div class="input-container __label __xl">
                 <span class="input-container-label">Lykilorð</span>
                 <input type="password" name="password" id="password" class="input input-sm">
-            <!--    <span class="input-container-message attention __wrong">Slæmt</span>-->
                 <div class="input-container-btn">
                   <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
                 </div>
@@ -252,7 +251,7 @@
               <div class="packages">
                 <div class="packages-box">
                   <label class="package">
-                    <input type="radio" class="input input-check" name="package" value="Léttvigt">
+                    <input type="radio" class="input input-check" name="package" value="Léttvigt" data-price="2480">
                     <span class="package-checked">
                       <span class="package-checked-icon">
                         <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
@@ -267,7 +266,7 @@
                 </div>
                 <div class="packages-box">
                   <label class="package">
-                    <input type="radio" class="input input-check" name="package" value="Millivigt">
+                    <input type="radio" class="input input-check" name="package" value="Millivigt" data-price="4960">
                     <span class="package-checked">
                       <span class="package-checked-icon">
                         <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
@@ -286,20 +285,20 @@
                 </div>
                 <div class="packages-box">
                   <label class="package">
-                    <input type="radio" class="input input-check" name="package" value="Þungavigt">
+                    <input type="radio" class="input input-check" name="package" value="Léttþungavigt" data-price="9920">
                     <span class="package-checked">
                       <span class="package-checked-icon">
                         <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
                       </span>
                     </span>
                     <span class="package-title">
-                      <span class="title-4">Þungavigt</span>
+                      <span class="title-4">Léttþungavigt</span>
                     </span>
                     <span class="package-description">
                       <span>Tilvalið fyrir þá sem eru að taka sín fyrstu skref með WordPress, ætal að setja upp einstaklingssíðu eða blogg.</span>
                     </span>
-                    <span class="package-detail">
-                      <span><strong>Við höfum samband við þig!</strong></span>
+                    <span class="package-price">
+                      <span><span class="package-price-value">9.920</span><span class="package-price-label">kr./mán.</span></span>
                     </span>
                   </label>
                 </div>
@@ -329,7 +328,7 @@
               <div class="payment-type">
                 <div class="payment-type-box">
                   <label class="render">
-                    <input type="radio" class="input input-check" name="paymentType" value="Mánaðarlegar greiðsur">
+                    <input type="radio" class="input input-check" name="paymentType" value="monthly">
                     <span class="render-checked">
                       <span class="render-checked-icon">
                         <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
@@ -337,14 +336,14 @@
                     </span>
                     <span class="render-title title-4">Mánaðarlegar greiðsur</span>
                     <span class="render-price">
-                      <span class="render-price-value">2.480</span>
+                      <span class="render-price-value" id="packageMonthlyPrice">2.480</span>
                       <span class="render-price-label">kr.</span>
                     </span>
                   </label>
                 </div>
                 <div class="payment-type-box">
                   <label class="render">
-                    <input type="radio" class="input input-check" name="paymentType" value="Árlegar greiðslur">
+                    <input type="radio" class="input input-check" name="paymentType" value="annual">
                     <span class="render-checked">
                       <span class="render-checked-icon">
                         <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
@@ -352,7 +351,7 @@
                     </span>
                     <span class="render-title title-4">Árlegar greiðslur</span>
                     <span class="render-price">
-                      <span class="render-price-value">53.568</span>
+                      <span class="render-price-value" id="packageAnnualPrice">53.568</span>
                       <span class="render-price-label">kr.</span>
                     </span>
                     <span class="render-detail">10% afsláttur</span>
@@ -380,7 +379,7 @@
             <div class="payment-title">
               <div class="payment-title-column">
                 <h2 class="title-2">Hvernig viltu greiða?</h2>
-                <h4 class="title-5"><strong>Millivigt:</strong> 4.960 kr./mán.</h4>
+                <h4 class="title-5"><strong id="selectedPackage">Millivigt:</strong> <span id="selectedPackagePrice">4.960</span> kr./mán.</h4>
               </div>
               <div class="payment-title-column">
                 <div class="payment-list">
@@ -398,13 +397,13 @@
                 <div class="payment-column">
                   <p class="title-14">Greiðandi</p>
                   <div class="input-container">
-                    <input type="text" name="name" class="input" placeholder="Fullt nafn eða fyrirtæki">
+                    <input type="text" name="fullName" class="input" placeholder="Fullt nafn eða fyrirtæki">
                     <div class="input-container-btn">
                       <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
                     </div>
                   </div>
                   <div class="input-container">
-                    <input type="text" name="socNumber" class="input" placeholder="Kennitala">
+                    <input type="number" name="social" class="input" placeholder="Kennitala">
                     <div class="input-container-btn">
                       <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
                     </div>
@@ -416,16 +415,7 @@
                     </div>
                   </div>
                   <div class="input-container">
-                    <svg class="icon icon-down"><use xlink:href="images/sprite.svg#collapse-arrow"></use></svg>
-                    <select name="municipality" class="select" required>
-                      <option value="" disabled="disabled" selected="selected">Veldu bæjarfélag</option>
-                      <option value="Bæjarfélag 1">Bæjarfélag 1</option>
-                      <option value="Bæjarfélag 2">Bæjarfélag 2</option>
-                      <option value="Bæjarfélag 3">Bæjarfélag 3</option>
-                      <option value="Bæjarfélag 4">Bæjarfélag 4</option>
-                      <option value="Bæjarfélag 5">Bæjarfélag 5</option>
-                      <option value="Bæjarfélag 6">Bæjarfélag 6</option>
-                    </select>
+                    <input type="number" name="postCode" class="input" placeholder="Póstnúmer">
                   </div>
                   <p class="title-12 ttu text-right hidden display-xxs">
                     <svg class="icon"><use xlink:href="images/sprite.svg#lock-password"></use></svg>DulkÓÐuÐ samskipti
@@ -434,13 +424,13 @@
                 <div class="payment-column">
                   <p class="title-14">Kortaupplýsingar</p>
                   <div class="input-container">
-                    <input type="text" name="cardName" class="input" placeholder="Fullt nafn eins og það er á korti">
+                    <input type="text" name="nameOnCard" class="input" placeholder="Fullt nafn eins og það er á korti">
                     <div class="input-container-btn">
                       <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
                     </div>
                   </div>
                   <div class="input-container">
-                    <input type="text" name="cardNumber" class="input" placeholder="Kortanúmer án bila eða bandstrika">
+                    <input type="number" name="numberCard" class="input" placeholder="Kortanúmer án bila eða bandstrika">
                     <div class="input-container-btn">
                       <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
                     </div>
@@ -449,21 +439,26 @@
                     <p>Gildistími</p>
                     <div class="input-container">
                       <svg class="icon icon-down"><use xlink:href="images/sprite.svg#collapse-arrow"></use></svg>
-                      <select name="cardDay" class="select">
-                        <option value="Mánudagur" selected="selected">Mán.</option>
-                        <option value="Þriðjudagur">Þri.</option>
-                        <option value="Miðvikudagur">Mið.</option>
-                        <option value="Fimmtudagur">Fim.</option>
-                        <option value="Föstudagur">Fös.</option>
-                        <option value="Laugardagur">Lau.</option>
-                        <option value="Sunnudagur">Sun.</option>
+                      <select name="periodCardMonth" class="select" required>
+                        <option value="" disabled="disabled" selected="selected">Mán.</option>
+                        <option value="Janúar">Janúar</option>
+                        <option value="Febrúar">Febrúar</option>
+                        <option value="Mars">Mars</option>
+                        <option value="Apríl">Apríl</option>
+                        <option value="Maí">Maí</option>
+                        <option value="Júní">Júní</option>
+                        <option value="Júlí">Júlí</option>
+                        <option value="Ágúst">Ágúst</option>
+                        <option value="September">September</option>
+                        <option value="Október">Október</option>
+                        <option value="Nóvember">Nóvember</option>
+                        <option value="Desember">Desember</option>
                       </select>
                     </div>
                     <div class="input-container">
                       <svg class="icon icon-down"><use xlink:href="images/sprite.svg#collapse-arrow"></use></svg>
-                      <select name="cardMonth" class="select" required>
+                      <select name="periodCardYear" class="select" required>
                         <option value="" disabled="disabled" selected="selected">Ár</option>
-                        <option value="2020">2020</option>
                         <option value="2021">2021</option>
                         <option value="2022">2022</option>
                         <option value="2023">2023</option>
@@ -696,6 +691,7 @@
 
 <script src="js/scripts.min.js"></script>
 <script src="js/validation.js"></script>
+<script src="js/create.js"></script>
 
 </body>
 </html>

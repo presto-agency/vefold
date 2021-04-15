@@ -39,7 +39,7 @@
     flex-wrap: wrap;
       &-box{
         width: calc(25% - 16px);
-        margin: 0 8px;
+        margin: 0 8px 16px;
           @include d(1200){
             width: calc(33.33% - 16px);
             margin: 0 8px 16px;

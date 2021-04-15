@@ -162,48 +162,48 @@
                           <div class="popup-box-close"></div>
                         </div>
                         <div class="user-data-form">
-                          <form>
-                            <div class="input-container __label">
+                          <form id="user-data">
+                            <label class="input-container __label">
                               <span class="input-container-label">Nafn notanda</span>
-                              <input type="text" class="input input-sm" value="Róbert Einarsson">
+                              <input type="text" name="name" class="input input-sm" value="Róbert Einarsson">
                               <span class="input-container-message">Rangt netfang eða lykilorð</span>
-                              <div class="input-container-btn">
+                              <span class="input-container-btn">
                                 <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
-                              </div>
-                            </div>
-                            <div class="input-container __label">
+                              </span>
+                            </label>
+                            <label class="input-container __label">
                               <span class="input-container-label">Netfang</span>
-                              <input type="text" class="input input-sm" value="robert@siminn.is">
+                              <input type="email" name="email" class="input input-sm" value="robert@siminn.is">
                               <span class="input-container-message">Rangt netfang eða lykilorð</span>
-                              <div class="input-container-btn">
+                              <span class="input-container-btn">
                                 <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
-                              </div>
-                            </div>
-                            <div class="input-container __label">
+                              </span>
+                            </label>
+                            <label class="input-container __label">
                               <span class="input-container-label">Núverandi lykilorð</span>
-                              <input type="password" class="input input-sm">
+                              <input type="password" name="currentPassword" class="input input-sm">
                               <span class="input-container-message">Rangt netfang eða lykilorð</span>
-                              <div class="input-container-btn">
+                              <span class="input-container-btn">
                                 <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
-                              </div>
-                            </div>
-                            <div class="input-container __label">
+                              </span>
+                            </label>
+                            <label class="input-container __label">
                               <span class="input-container-label">Nýtt lykilorð</span>
-                              <input type="password" class="input input-sm">
+                              <input type="password" name="newPassword" class="input input-sm" id="userNewPassword">
                               <span class="input-container-message">Rangt netfang eða lykilorð</span>
-                              <div class="input-container-btn">
+                              <span class="input-container-btn">
                                 <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
-                              </div>
-                            </div>
-                            <div class="input-container __label">
-                            <span class="input-container-label">Nýtt lykilorð aftur</span>
-                            <input type="password" class="input input-sm">
-                            <span class="input-container-message">Rangt netfang eða lykilorð</span>
-                            <div class="input-container-btn">
-                              <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
-                            </div>
-                          </div>
-                            <button class="btn btn-md">Vista</button>
+                              </span>
+                            </label>
+                            <label class="input-container __label">
+                              <span class="input-container-label">Nýtt lykilorð aftur</span>
+                              <input type="password" name="confirmNewPassword" class="input input-sm">
+                              <span class="input-container-message">Rangt netfang eða lykilorð</span>
+                              <span class="input-container-btn">
+                                <svg class="icon"><use xlink:href="images/sprite.svg#close"></use></svg>
+                              </span>
+                            </label>
+                            <button class="btn btn-md" type="submit">Vista</button>
                           </form>
                         </div>
                       </div>
@@ -1396,6 +1396,7 @@
 
 <script src="js/scripts.min.js"></script>
 <script src="js/validation.js"></script>
+<script src="js/create.js"></script>
 
 </body>
 </html>

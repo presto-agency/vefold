@@ -5,7 +5,7 @@
   <div class="payment-type">
     <div class="payment-type-box">
       <label class="render">
-        <input type="radio" class="input input-check" name="paymentType" value="Mánaðarlegar greiðsur" />
+        <input type="radio" class="input input-check" name="paymentType" value="monthly" />
         <span class="render-checked">
           <span class="render-checked-icon">
             <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
@@ -13,14 +13,14 @@
         </span>
         <span class="render-title title-4">Mánaðarlegar greiðsur</span>
         <span class="render-price">
-          <span class="render-price-value">2.480</span>
+          <span class="render-price-value" id="packageMonthlyPrice">2.480</span>
           <span class="render-price-label">kr.</span>
         </span>
       </label>
     </div>
     <div class="payment-type-box">
       <label class="render">
-        <input type="radio" class="input input-check" name="paymentType" value="Árlegar greiðslur" />
+        <input type="radio" class="input input-check" name="paymentType" value="annual" />
         <span class="render-checked">
           <span class="render-checked-icon">
             <svg class="icon"><use xlink:href="images/sprite.svg#selected-lg"></use></svg>
@@ -28,7 +28,7 @@
         </span>
         <span class="render-title title-4">Árlegar greiðslur</span>
         <span class="render-price">
-          <span class="render-price-value">53.568</span>
+          <span class="render-price-value" id="packageAnnualPrice">53.568</span>
           <span class="render-price-label">kr.</span>
         </span>
         <span class="render-detail">10% afsláttur</span>

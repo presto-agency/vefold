@@ -20,9 +20,16 @@ const cheerio = require('gulp-cheerio');
 const replace = require('gulp-replace');
 
 const files = {
-    scssPath: [ 'src/sass/main.scss' ],
-    jsPath: ['src/libs/jquery-3.3.1.min.js', 'src/libs/*.js', '!src/libs/additional-methods.min.js', 'src/libs/additional-methods.min.js', 'src/js/index.js'],
-    htmlPath: [ 'src/html/*.html' ],
+    scssPath:
+        [   'src/sass/main.scss'    ],
+    jsPath:
+        [   'src/libs/jquery-3.3.1.min.js',
+            'src/libs/*.js',
+            '!src/libs/additional-methods.min.js',
+            'src/libs/additional-methods.min.js',
+            'src/js/index.js' ],
+    htmlPath:
+        [   'src/html/*.html'   ],
 };
 
 // WATCH TASKS //
@@ -86,7 +93,8 @@ function watchTask() {
     watch(['src/js/index.js'], parallel(jsTask));
     watch('src/html/**/*', htmlTask);
     watch('src/pages/*', moveHtml);
-    watch(['src/validation.js'], moveValidationFile);
+    watch(['src/js/validation.js'], moveValidationFile);
+    watch(['src/js/create.js'], moveCreateFile);
 
 }
 
@@ -149,7 +157,11 @@ function svg() {
 }
 
 function moveValidationFile() {
-    return src('src/validation.js').pipe(dest('dist/js'));
+    return src('src/js/validation.js').pipe(dest('dist/js'));
+}
+
+function moveCreateFile() {
+    return src('src/js/create.js').pipe(dest('dist/js'));
 }
 
 exports.build = series(
@@ -159,5 +171,6 @@ exports.build = series(
     moveFonts,
     moveImages,
     svg,
-    moveValidationFile
+    moveValidationFile,
+    moveCreateFile
 );
