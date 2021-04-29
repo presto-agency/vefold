@@ -11,7 +11,8 @@ let site = {
     },
     paymentType: {
         name: '',
-        price: ''
+        price: '',
+        label: ''
     },
     payment: {
         fullName: '',
@@ -72,7 +73,6 @@ $('#create-step-2').on('submit', function (event) {
         $('input[name="paymentType"][value="monthly"]').attr('data-price', checkedInput.dataset.price);
         $('input[name="paymentType"][value="annual"]').attr('data-price', annualPrice - annualPriceWithPercent);
         $('#selectedPackage').html(checkedInput.value);
-        $('#selectedPackagePrice').html(numberWithCommas(checkedInput.dataset.price));
         $('#create-carousel').slick('slickNext');
     }
 });
@@ -88,9 +88,12 @@ $('#create-step-3').on('submit', function (event) {
             ...site,
             paymentType: {
                 name: checkedInput.value,
-                price: checkedInput.dataset.price
+                price: checkedInput.dataset.price,
+                label: checkedInput.dataset.label
             }
         };
+        $('#selectedPackagePrice').html(numberWithCommas(checkedInput.dataset.price));
+        $('#selectedPackagePriceLabel').html(checkedInput.dataset.label);
         $('#create-carousel').slick('slickNext');
     }
 });
